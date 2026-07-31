@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Home renders 1`] = `
+<div
+  data-test-id="home-page"
+>
+  <div
+    data-test-id="mock-test-component"
+  >
+    Please check back for further updates.
+  </div>
+</div>
+`;

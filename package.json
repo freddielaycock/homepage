@@ -7,17 +7,18 @@
 		"url": "git+https://github.com/flaycock/homepage.git"
 	},
 	"scripts": {
-		"dev": "node esbuild.config.mjs --serve",
-		"build": "node esbuild.config.mjs",
+		"build": "npx tsr generate && node esbuild.config.mjs",
+		"dev": "npx tsr generate && node esbuild.config.mjs --serve",
+		"generate-routes": "npx tsr generate",
 		"lint": "biome lint",
 		"lint:fix": "biome lint --write",
+		"prepare": "husky",
 		"test": "jest",
-		"test:coverage": "jest --coverage",
-		"prepare": "husky"
+		"test:coverage": "jest --coverage"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.6",
-		"@tanstack/router-plugin": "^1.168.23",
+		"@tanstack/router-plugin": "1.168.23",
 		"@testing-library/jest-dom": "7.0.0",
 		"@testing-library/react": "16.3.2",
 		"@types/jest": "30.0.0",
@@ -34,6 +35,8 @@
 	},
 	"dependencies": {
 		"@chakra-ui/react": "3.36.1",
+		"@tanstack/react-router": "1.170.18",
+		"@tanstack/react-router-devtools": "1.167.0",
 		"next-themes": "0.4.6",
 		"react": "19.2.8",
 		"react-dom": "19.2.8",
