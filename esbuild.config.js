@@ -1,5 +1,5 @@
 const esbuild = require("esbuild");
-const fs = require("fs");
+const fs = require("node:fs");
 
 const outdir = "build";
 const serve = process.argv.includes("--serve");
