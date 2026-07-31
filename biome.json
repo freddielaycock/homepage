@@ -11,7 +11,7 @@
     "ignoreUnknown": false,
 		"includes": [
       "**",
-      "!!build"
+      "!!dist"
     ]
   },
   "formatter": {

@@ -7,8 +7,8 @@
 		"url": "git+https://github.com/flaycock/homepage.git"
 	},
 	"scripts": {
-		"build": "node esbuild.config.js",
-		"start": "node esbuild.config.js --serve",
+		"dev": "node esbuild.config.mjs --serve",
+		"build": "node esbuild.config.mjs",
 		"lint": "biome lint",
 		"lint:fix": "biome lint --write",
 		"test": "jest",
@@ -17,6 +17,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.6",
+		"@tanstack/router-plugin": "^1.168.23",
 		"@testing-library/jest-dom": "7.0.0",
 		"@testing-library/react": "16.3.2",
 		"@types/jest": "30.0.0",
@@ -39,11 +40,11 @@
 		"react-icons": "5.7.0",
 		"styled-components": "6.4.4"
 	},
-  "packageManager": "pnpm@10.6.0",
-  "engines": {
-    "node": "24.15.0",
-    "pnpm": "10.6.0"
-  },
+	"packageManager": "pnpm@10.6.0",
+	"engines": {
+		"node": "24.15.0",
+		"pnpm": "10.6.0"
+	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
 			"esbuild"

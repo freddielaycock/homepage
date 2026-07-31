@@ -24,7 +24,7 @@
     "build",
     "coverage",
     "*.config.js",
-    "*.test.ts",
+    "*.spec.ts",
     "temp"
   ],
   "ts-node": {
