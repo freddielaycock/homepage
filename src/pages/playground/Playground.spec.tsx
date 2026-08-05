@@ -1,8 +1,7 @@
 import { render as rtlRender, screen } from "@testing-library/react";
-import { Provider } from "../../components/ui/provider";
-
-import { Playground } from "./Playground";
 import type { PageProps } from "../../components/page/Pages.types";
+import { Provider } from "../../components/ui/provider";
+import { Playground } from "./Playground";
 
 jest.mock("../../components/page/Page", () => ({
   Page: ({ heading, id, children }: PageProps) => (
@@ -13,12 +12,12 @@ jest.mock("../../components/page/Page", () => ({
   ),
 }));
 
-const render = () => rtlRender(
-  <Provider>
-    <Playground />
-  </Provider>
-);
-
+const render = () =>
+  rtlRender(
+    <Provider>
+      <Playground />
+    </Provider>,
+  );
 
 describe("Playground", () => {
   it("renders", () => {

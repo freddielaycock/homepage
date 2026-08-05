@@ -1,7 +1,6 @@
 import { render as rtlRender, screen } from "@testing-library/react";
-
-import { Home } from "./Home";
 import type { PageProps } from "../../components/page/Pages.types";
+import { Home } from "./Home";
 
 jest.mock("../../components/page/Page", () => ({
   Page: ({ heading, id, children }: PageProps) => (

@@ -4,13 +4,14 @@ import { Provider } from "../../components/ui/provider";
 import { Page } from "./Page";
 import type { PageProps } from "./Pages.types";
 
-const render = ({ heading, id, children }: PageProps) => rtlRender(
-  <Provider>
-    <Page heading={heading} id={id}>
-      {children}
-    </Page>
-  </Provider>
-);
+const render = ({ heading, id, children }: PageProps) =>
+  rtlRender(
+    <Provider>
+      <Page heading={heading} id={id}>
+        {children}
+      </Page>
+    </Provider>,
+  );
 
 describe("Page", () => {
   it("renders with the correct heading", () => {

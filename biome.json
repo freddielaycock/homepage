@@ -9,11 +9,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-		"includes": [
-      "**",
-      "!!dist",
-      "!!**/routeTree.gen.ts"
-    ]
+    "includes": ["**", "!!dist", "!!**/routeTree.gen.ts"]
   },
   "formatter": {
     "indentStyle": "space"

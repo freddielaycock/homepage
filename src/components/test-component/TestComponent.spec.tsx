@@ -3,11 +3,12 @@ import { render as rtlRender, screen } from "@testing-library/react";
 import { Provider } from "../ui/provider";
 import { TestComponent } from "./TestComponent";
 
-const render = (text?: string) => rtlRender(
-  <Provider>
-    <TestComponent text={text} />
-  </Provider>    
-);
+const render = (text?: string) =>
+  rtlRender(
+    <Provider>
+      <TestComponent text={text} />
+    </Provider>,
+  );
 
 describe("TestComponent", () => {
   it("renders", () => {
