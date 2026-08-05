@@ -10,5 +10,94 @@ exports[`Playground renders 1`] = `
   <p>
     This is a page I have used for development that allows me to configure components in isolation, before then integrating them into pages.
   </p>
+  <span
+    aria-orientation="horizontal"
+    class="chakra-separator css-9iezwp"
+    role="separator"
+  />
+  <div
+    class="chakra-stack css-b769mm"
+  >
+    <p
+      class="css-uok8h6"
+    >
+      Components
+    </p>
+    <div
+      class="chakra-scroll-area__root css-7s6lek"
+      data-overflow-x=""
+      data-overflow-y=""
+      data-part="root"
+      data-scope="scroll-area"
+      dir="ltr"
+      id="scroll-area-_r_0_"
+      role="presentation"
+      style="position: relative; --corner-width: 0px; --corner-height: 0px; --thumb-width: 0px; --thumb-height: 0px;"
+    >
+      <div
+        class="chakra-scroll-area__viewport css-5n28yg"
+        data-at-left=""
+        data-at-top=""
+        data-overflow-x=""
+        data-overflow-y=""
+        data-ownedby="scroll-area-_r_0_"
+        data-part="viewport"
+        data-scope="scroll-area"
+        id="scroll-area-_r_0_:viewport"
+        role="presentation"
+        style="overflow: auto;"
+        tabindex="0"
+      >
+        <div
+          class="chakra-scroll-area__content css-1pdwgr6"
+          data-overflow-x=""
+          data-overflow-y=""
+          data-part="content"
+          data-scope="scroll-area"
+          id="scroll-area-_r_0_:content"
+          role="presentation"
+          style="min-width: fit-content;"
+        >
+          <div
+            class="css-xruegh"
+          >
+            <button
+              class="chakra-button css-kcj133"
+              type="button"
+            >
+              Page
+            </button>
+          </div>
+          <div
+            class="css-xruegh"
+          >
+            <button
+              class="chakra-button css-kcj133"
+              type="button"
+            >
+              Test Component
+            </button>
+          </div>
+          <div
+            class="css-xruegh"
+          >
+            <button
+              class="chakra-button css-kcj133"
+              type="button"
+            >
+              Theme Toggle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    data-test-id="test-page-page"
+  >
+    <h1>
+      Test Page
+    </h1>
+  </div>
 </div>
 `;

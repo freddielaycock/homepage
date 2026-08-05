@@ -1,4 +1,4 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import type { FC } from "react";
 import styled from "styled-components";
 
@@ -12,7 +12,6 @@ const TestComponentWrapper = styled.div`
 
 export const TestComponent: FC<TestInput> = ({ text }) => (
   <TestComponentWrapper data-test-id="test-component">
-    <Heading>This website is currently being rebuilt</Heading>
     {text && <Text data-test-id="test-component-text">{text}</Text>}
   </TestComponentWrapper>
 );

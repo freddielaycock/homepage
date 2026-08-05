@@ -5,11 +5,6 @@ exports[`TestComponent renders 1`] = `
   class="sc-bcHNtg OaTNM"
   data-test-id="test-component"
 >
-  <h2
-    class="chakra-heading css-eprwor"
-  >
-    This website is currently being rebuilt
-  </h2>
   <p
     data-test-id="test-component-text"
   >

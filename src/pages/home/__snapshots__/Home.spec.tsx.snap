@@ -7,6 +7,12 @@ exports[`Home renders 1`] = `
   <h1>
     Homepage
   </h1>
-  Please check back for further updates.
+  <div
+    class="css-11t05gz"
+  >
+    <p>
+      Hello! Welcome to my personal homepage. This is a work in progress, so please excuse the mess. I am using this site to experiment with new technologies and ideas, and to showcase some of my work. Please feel free to explore and check back often for updates!
+    </p>
+  </div>
 </div>
 `;

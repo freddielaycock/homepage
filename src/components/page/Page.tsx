@@ -17,7 +17,11 @@ export const Page: FC<PageProps> = ({
   children,
 }) => (
   <PageWrapper data-test-id={`${id}-page`}>
-    {heading && <Heading size={headingSize}>{heading}</Heading>}
+    {heading && (
+      <Heading p={4} size={headingSize}>
+        {heading}
+      </Heading>
+    )}
     {children}
   </PageWrapper>
 );

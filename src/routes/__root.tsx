@@ -11,7 +11,7 @@ const TanStackRouterDevtools =
     : lazy(() =>
         import("@tanstack/react-router-devtools").then((mod) => ({
           default: mod.TanStackRouterDevtools,
-        }))
+        })),
       );
 
 const RootLayout = () => (
