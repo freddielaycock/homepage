@@ -15,7 +15,7 @@
     "routes": "pnpm exec tsr generate",
     "test": "jest",
     "test:coverage": "jest --coverage",
-		"test:update": "jest --updateSnapshot"
+    "test:update": "jest --updateSnapshot"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.6",

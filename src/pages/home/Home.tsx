@@ -10,7 +10,7 @@ export const Home: FC = () => (
         Hello! Welcome to my personal homepage. This is a work in progress, so
         please excuse the mess. I am using this site to experiment with new
         technologies and ideas, and to showcase some of my work. Please feel
-        free to explore and check back often for updates!
+        free to explore and check back for updates!
       </Text>
     </Box>
   </Page>

@@ -14,7 +14,7 @@ export const Career: FC = () => (
         interests. Please feel free to explore and learn more about my
         professional background.
       </Text>
-      <Accordion.Root collapsible defaultValue={["sky"]}>
+      <Accordion.Root collapsible>
         {CAREER_ACCORDION_ITEMS.map(
           ({ title, value, content }: CareerAccordionItem) => (
             <Accordion.Item key={value} value={value}>
