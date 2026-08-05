@@ -10,9 +10,9 @@ const PageWrapper = styled.div`
   text-align: center;
 `;
 
-export const Page: FC<PageProps> = ({ heading, id, children }) => (
+export const Page: FC<PageProps> = ({ heading, headingSize = "2xl", id, children }) => (
   <PageWrapper data-test-id={`${id}-page`}>
-    {heading && <Heading>{heading}</Heading>}
+    {heading && <Heading size={headingSize}>{heading}</Heading>}
     {children}
   </PageWrapper>
 );
