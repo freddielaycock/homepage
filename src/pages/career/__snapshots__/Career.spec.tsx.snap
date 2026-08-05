@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Career renders 1`] = `
+<div
+  data-test-id="career-page"
+>
+  <h1>
+    Career
+  </h1>
+  <div
+    class="css-11t05gz"
+  >
+    <p
+      class="css-1t0c2hd"
+    >
+      Below is a collection of my career history, including my work experience and education. I have also included a brief summary of my skills and interests. Please feel free to explore and learn more about my professional background.
+    </p>
+    <div
+      class="chakra-accordion__root css-7u3wtz"
+      data-orientation="vertical"
+      data-part="root"
+      data-scope="accordion"
+      dir="ltr"
+      id="accordion:_r_0_"
+    >
+      <div
+        class="chakra-accordion__item css-xiajt7"
+        data-orientation="vertical"
+        data-part="item"
+        data-scope="accordion"
+        data-state="open"
+        dir="ltr"
+        id="collapsible:accordion:_r_0_:item:sky"
+      >
+        <button
+          aria-controls="accordion:_r_0_:content:sky"
+          aria-expanded="true"
+          class="chakra-accordion__itemTrigger css-esjupq"
+          data-controls="accordion:_r_0_:content:sky"
+          data-orientation="vertical"
+          data-ownedby="accordion:_r_0_"
+          data-part="item-trigger"
+          data-scope="accordion"
+          data-state="open"
+          dir="ltr"
+          id="accordion:_r_0_:trigger:sky"
+          type="button"
+        >
+          <span
+            class="css-6rpaop"
+          >
+            Sky
+          </span>
+          <div
+            aria-hidden="true"
+            class="chakra-accordion__itemIndicator css-1ic543h"
+            data-orientation="vertical"
+            data-part="item-indicator"
+            data-scope="accordion"
+            data-state="open"
+            dir="ltr"
+          >
+            <svg
+              class="css-s3mb0o"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m6 9 6 6 6-6"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-labelledby="accordion:_r_0_:trigger:sky"
+          class="chakra-accordion__itemContent css-pa2fdc"
+          data-collapsible=""
+          data-orientation="vertical"
+          data-part="item-content"
+          data-scope="accordion"
+          dir="ltr"
+          id="accordion:_r_0_:content:sky"
+          role="region"
+          style="--height: 0px; --width: 0px;"
+        >
+          <p
+            class="css-azs4f8"
+          >
+            Sky content to go here.
+          </p>
+        </div>
+      </div>
+      <div
+        class="chakra-accordion__item css-xiajt7"
+        data-orientation="vertical"
+        data-part="item"
+        data-scope="accordion"
+        data-state="closed"
+        dir="ltr"
+        id="collapsible:accordion:_r_0_:item:farnell"
+      >
+        <button
+          aria-controls="accordion:_r_0_:content:farnell"
+          aria-expanded="false"
+          class="chakra-accordion__itemTrigger css-esjupq"
+          data-controls="accordion:_r_0_:content:farnell"
+          data-orientation="vertical"
+          data-ownedby="accordion:_r_0_"
+          data-part="item-trigger"
+          data-scope="accordion"
+          data-state="closed"
+          dir="ltr"
+          id="accordion:_r_0_:trigger:farnell"
+          type="button"
+        >
+          <span
+            class="css-6rpaop"
+          >
+            Farnell
+          </span>
+          <div
+            aria-hidden="true"
+            class="chakra-accordion__itemIndicator css-1ic543h"
+            data-orientation="vertical"
+            data-part="item-indicator"
+            data-scope="accordion"
+            data-state="closed"
+            dir="ltr"
+          >
+            <svg
+              class="css-s3mb0o"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m6 9 6 6 6-6"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-labelledby="accordion:_r_0_:trigger:farnell"
+          class="chakra-accordion__itemContent css-pa2fdc"
+          data-collapsible=""
+          data-orientation="vertical"
+          data-part="item-content"
+          data-scope="accordion"
+          data-state="closed"
+          dir="ltr"
+          hidden=""
+          id="accordion:_r_0_:content:farnell"
+          role="region"
+          style="--height: 0px; --width: 0px;"
+        >
+          <p
+            class="css-azs4f8"
+          >
+            Farnell content to go here.
+          </p>
+        </div>
+      </div>
+      <div
+        class="chakra-accordion__item css-xiajt7"
+        data-orientation="vertical"
+        data-part="item"
+        data-scope="accordion"
+        data-state="closed"
+        dir="ltr"
+        id="collapsible:accordion:_r_0_:item:helyx"
+      >
+        <button
+          aria-controls="accordion:_r_0_:content:helyx"
+          aria-expanded="false"
+          class="chakra-accordion__itemTrigger css-esjupq"
+          data-controls="accordion:_r_0_:content:helyx"
+          data-orientation="vertical"
+          data-ownedby="accordion:_r_0_"
+          data-part="item-trigger"
+          data-scope="accordion"
+          data-state="closed"
+          dir="ltr"
+          id="accordion:_r_0_:trigger:helyx"
+          type="button"
+        >
+          <span
+            class="css-6rpaop"
+          >
+            Helyx
+          </span>
+          <div
+            aria-hidden="true"
+            class="chakra-accordion__itemIndicator css-1ic543h"
+            data-orientation="vertical"
+            data-part="item-indicator"
+            data-scope="accordion"
+            data-state="closed"
+            dir="ltr"
+          >
+            <svg
+              class="css-s3mb0o"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m6 9 6 6 6-6"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-labelledby="accordion:_r_0_:trigger:helyx"
+          class="chakra-accordion__itemContent css-pa2fdc"
+          data-collapsible=""
+          data-orientation="vertical"
+          data-part="item-content"
+          data-scope="accordion"
+          data-state="closed"
+          dir="ltr"
+          hidden=""
+          id="accordion:_r_0_:content:helyx"
+          role="region"
+          style="--height: 0px; --width: 0px;"
+        >
+          <p
+            class="css-azs4f8"
+          >
+            Helyx content to go here.
+          </p>
+        </div>
+      </div>
+      <div
+        class="chakra-accordion__item css-xiajt7"
+        data-orientation="vertical"
+        data-part="item"
+        data-scope="accordion"
+        data-state="closed"
+        dir="ltr"
+        id="collapsible:accordion:_r_0_:item:sg-digital"
+      >
+        <button
+          aria-controls="accordion:_r_0_:content:sg-digital"
+          aria-expanded="false"
+          class="chakra-accordion__itemTrigger css-esjupq"
+          data-controls="accordion:_r_0_:content:sg-digital"
+          data-orientation="vertical"
+          data-ownedby="accordion:_r_0_"
+          data-part="item-trigger"
+          data-scope="accordion"
+          data-state="closed"
+          dir="ltr"
+          id="accordion:_r_0_:trigger:sg-digital"
+          type="button"
+        >
+          <span
+            class="css-6rpaop"
+          >
+            SG Digital
+          </span>
+          <div
+            aria-hidden="true"
+            class="chakra-accordion__itemIndicator css-1ic543h"
+            data-orientation="vertical"
+            data-part="item-indicator"
+            data-scope="accordion"
+            data-state="closed"
+            dir="ltr"
+          >
+            <svg
+              class="css-s3mb0o"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m6 9 6 6 6-6"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-labelledby="accordion:_r_0_:trigger:sg-digital"
+          class="chakra-accordion__itemContent css-pa2fdc"
+          data-collapsible=""
+          data-orientation="vertical"
+          data-part="item-content"
+          data-scope="accordion"
+          data-state="closed"
+          dir="ltr"
+          hidden=""
+          id="accordion:_r_0_:content:sg-digital"
+          role="region"
+          style="--height: 0px; --width: 0px;"
+        >
+          <p
+            class="css-azs4f8"
+          >
+            SG Digital content to go here.
+          </p>
+        </div>
+      </div>
+      <div
+        class="chakra-accordion__item css-xiajt7"
+        data-orientation="vertical"
+        data-part="item"
+        data-scope="accordion"
+        data-state="closed"
+        dir="ltr"
+        id="collapsible:accordion:_r_0_:item:education"
+      >
+        <button
+          aria-controls="accordion:_r_0_:content:education"
+          aria-expanded="false"
+          class="chakra-accordion__itemTrigger css-esjupq"
+          data-controls="accordion:_r_0_:content:education"
+          data-orientation="vertical"
+          data-ownedby="accordion:_r_0_"
+          data-part="item-trigger"
+          data-scope="accordion"
+          data-state="closed"
+          dir="ltr"
+          id="accordion:_r_0_:trigger:education"
+          type="button"
+        >
+          <span
+            class="css-6rpaop"
+          >
+            Education
+          </span>
+          <div
+            aria-hidden="true"
+            class="chakra-accordion__itemIndicator css-1ic543h"
+            data-orientation="vertical"
+            data-part="item-indicator"
+            data-scope="accordion"
+            data-state="closed"
+            dir="ltr"
+          >
+            <svg
+              class="css-s3mb0o"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="m6 9 6 6 6-6"
+              />
+            </svg>
+          </div>
+        </button>
+        <div
+          aria-labelledby="accordion:_r_0_:trigger:education"
+          class="chakra-accordion__itemContent css-pa2fdc"
+          data-collapsible=""
+          data-orientation="vertical"
+          data-part="item-content"
+          data-scope="accordion"
+          data-state="closed"
+          dir="ltr"
+          hidden=""
+          id="accordion:_r_0_:content:education"
+          role="region"
+          style="--height: 0px; --width: 0px;"
+        >
+          <p
+            class="css-azs4f8"
+          >
+            Education content to go here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
