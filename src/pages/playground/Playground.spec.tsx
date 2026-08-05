@@ -1,6 +1,7 @@
 import { render as rtlRender, screen } from "@testing-library/react";
+import { Provider } from "../../components/ui/provider";
 
-import { Home } from "./Home";
+import { Playground } from "./Playground";
 import type { PageProps } from "../../components/page/Pages.types";
 
 jest.mock("../../components/page/Page", () => ({
@@ -12,12 +13,17 @@ jest.mock("../../components/page/Page", () => ({
   ),
 }));
 
-const render = () => rtlRender(<Home />);
+const render = () => rtlRender(
+  <Provider>
+    <Playground />
+  </Provider>
+);
 
-describe("Home", () => {
+
+describe("Playground", () => {
   it("renders", () => {
     render();
 
-    expect(screen.getByTestId("home-page")).toMatchSnapshot();
+    expect(screen.getByTestId("playground-page")).toMatchSnapshot();
   });
 });

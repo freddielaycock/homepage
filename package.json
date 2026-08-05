@@ -9,10 +9,10 @@
 	"scripts": {
 		"build": "npx tsr generate && node esbuild.config.mjs",
 		"dev": "npx tsr generate && node esbuild.config.mjs --serve",
-		"generate-routes": "npx tsr generate",
 		"lint": "biome lint",
 		"lint:fix": "biome lint --write",
 		"prepare": "husky",
+		"routes": "npx tsr generate",
 		"test": "jest",
 		"test:coverage": "jest --coverage"
 	},
@@ -47,13 +47,5 @@
 	"engines": {
 		"node": "24.15.0",
 		"pnpm": "10.6.0"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild"
-		],
-		"ignoredBuiltDependencies": [
-			"unrs-resolver"
-		]
 	}
 }

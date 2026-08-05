@@ -1,9 +1,9 @@
 import type { FC } from "react";
 
-import { TestComponent } from "../../components/test-component/TestComponent";
+import { Page } from "../../components/page/Page";
 
 export const Home: FC = () => (
-	<div data-test-id="home-page">
-		<TestComponent text="Please check back for further updates." />
-	</div>
+	<Page heading="Homepage" id="home">
+		Please check back for further updates.
+	</Page>
 );
