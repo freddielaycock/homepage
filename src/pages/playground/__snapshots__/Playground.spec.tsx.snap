@@ -62,7 +62,8 @@ exports[`Playground renders 1`] = `
             class="css-xruegh"
           >
             <button
-              class="chakra-button css-kcj133"
+              class="chakra-button css-83tebu"
+              data-test-id="playground-page-button"
               type="button"
             >
               Page
@@ -72,7 +73,8 @@ exports[`Playground renders 1`] = `
             class="css-xruegh"
           >
             <button
-              class="chakra-button css-kcj133"
+              class="chakra-button css-4xfxjp"
+              data-test-id="playground-test-component-button"
               type="button"
             >
               Test Component
@@ -82,7 +84,8 @@ exports[`Playground renders 1`] = `
             class="css-xruegh"
           >
             <button
-              class="chakra-button css-kcj133"
+              class="chakra-button css-4xfxjp"
+              data-test-id="playground-theme-toggle-button"
               type="button"
             >
               Theme Toggle

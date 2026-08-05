@@ -15,6 +15,7 @@ import { ThemeToggle } from "../../components/theme-toggle/ThemeToggle";
 type PlaygroundEntry<P extends object = object> = {
   name: string;
   component: ComponentType<P>;
+  id: string;
   props: P;
 };
 
@@ -22,6 +23,7 @@ const components: PlaygroundEntry[] = [
   {
     name: "Page",
     component: Page,
+    id: "page",
     props: {
       heading: "Test Page",
       id: "test-page",
@@ -30,6 +32,7 @@ const components: PlaygroundEntry[] = [
   {
     name: "Test Component",
     component: TestComponent,
+    id: "test-component",
     props: {
       text: "This is a test component",
     },
@@ -37,6 +40,7 @@ const components: PlaygroundEntry[] = [
   {
     name: "Theme Toggle",
     component: ThemeToggle,
+    id: "theme-toggle",
     props: {},
   },
 ] as PlaygroundEntry[];
@@ -64,12 +68,19 @@ export const Playground: FC = () => {
         <ScrollArea.Root variant="hover">
           <ScrollArea.Viewport>
             <ScrollArea.Content paddingEnd="3" spaceY="4" textStyle="sm">
-              {components.map(({ name, component, props }) => (
-                <Box key={name} gap={2}>
+              {components.map(({ name, component, id, props }) => (
+                <Box key={id} gap={2}>
                   <Button
+                    colorPalette="gray"
+                    data-test-id={`playground-${id}-button`}
                     onClick={() =>
-                      setSelectedComponent({ name, component, props })
+                      setSelectedComponent({ name, component, id, props })
                     }
+                    variant="surface"
+                    {...(selectedComponent.id === id && {
+                      variant: "solid",
+                      colorPalette: { _light: "cyan", _dark: "green" },
+                    })}
                   >
                     {name}
                   </Button>
