@@ -27,6 +27,9 @@ const RootLayout = () => (
         <Link to="/playground" className="[&.active]:font-bold">
           Playground
         </Link>
+        <Link to="/projects" className="[&.active]:font-bold">
+          Projects
+        </Link>
       </Box>
       <Box justifyContent="flex-end" display="flex" flex={1}>
         <ThemeToggle />

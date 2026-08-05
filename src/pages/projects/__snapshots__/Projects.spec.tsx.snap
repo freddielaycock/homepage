@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Projects renders 1`] = `
+<div
+  data-test-id="projects-page"
+>
+  <h1>
+    Projects
+  </h1>
+  <div
+    class="css-11t05gz"
+  >
+    <p>
+      This page houses a collection of my personal projects, which I have built to explore new technologies and ideas. These projects are a reflection of my curiosity and passion for learning, and I hope they inspire others to pursue their own creative endeavors.
+    </p>
+    <div
+      class="css-di7drd"
+    >
+      <div>
+        <div
+          class="css-1p8kfus"
+        >
+          <p
+            class="css-p998o2"
+          >
+            Projects to be added!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
