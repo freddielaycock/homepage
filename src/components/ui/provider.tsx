@@ -12,11 +12,15 @@ const config = defineConfig({
   theme: {
     semanticTokens: {
       colors: {
-        danger: {
-          value: { base: "{colors.red}", _dark: "{colors.darkred}" },
+        bg: {
+          DEFAULT: {
+            value: { _light: "#f1f1f1", _dark: "#333333" }, // Custom dark background
+          },
         },
-        success: {
-          value: { base: "{colors.green}", _dark: "{colors.darkgreen}" },
+        fg: {
+          DEFAULT: {
+            value: { _light: "#333333", _dark: "#f1f1f1" }, // Custom dark text color
+          },
         },
       },
     },

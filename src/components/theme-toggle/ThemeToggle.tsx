@@ -8,7 +8,7 @@ export const ThemeToggle = () => {
 
   return (
     <Button variant="outline" onClick={toggleColorMode}>
-      {colorMode === "light" ? "Toggle Dark Mode" : "Toggle Light Mode"}
+      {colorMode === "light" ? "Dark?" : "Light?"}
     </Button>
   );
 };

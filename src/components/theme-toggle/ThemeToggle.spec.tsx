@@ -1,5 +1,5 @@
 import { screen } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
+import userEvent from "@testing-library/user-event";
 import { ChakraUIRender } from "../../utils/chakra-ui-render";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -19,14 +19,14 @@ describe("ThemeToggle", () => {
 
     const buttonElement = screen.getByRole("button");
 
-    expect(buttonElement).toHaveTextContent("Toggle Dark Mode");
+    expect(buttonElement).toHaveTextContent("Dark?");
 
     await userEvent.click(buttonElement);
 
-    expect(buttonElement).toHaveTextContent("Toggle Light Mode");
+    expect(buttonElement).toHaveTextContent("Light?");
 
     await userEvent.click(buttonElement);
 
-    expect(buttonElement).toHaveTextContent("Toggle Dark Mode");
+    expect(buttonElement).toHaveTextContent("Dark?");
   });
 });
