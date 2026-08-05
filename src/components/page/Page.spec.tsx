@@ -1,16 +1,13 @@
-import { render as rtlRender, screen } from "@testing-library/react";
-import { Provider } from "../../components/ui/provider";
-
+import { screen } from "@testing-library/react";
+import { ChakraUIRender } from "../../utils/chakra-ui-render";
 import { Page } from "./Page";
 import type { PageProps } from "./Pages.types";
 
 const render = ({ heading, id, children }: PageProps) =>
-  rtlRender(
-    <Provider>
-      <Page heading={heading} id={id}>
-        {children}
-      </Page>
-    </Provider>,
+  ChakraUIRender(
+    <Page heading={heading} id={id}>
+      {children}
+    </Page>,
   );
 
 describe("Page", () => {
