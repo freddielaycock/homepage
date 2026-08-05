@@ -13,6 +13,7 @@ const config = {
   format: "esm",
   target: ["esnext"],
   loader: { ".gen": "ts" },
+  define: { "process.env.NODE_ENV": JSON.stringify(serve ? "development" : "production") },
   plugins: [tanstackRouter({ target: "react", autoCodeSplitting: true })],
 };
 

@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
-import type { PageProps } from "../../components/page/Pages.types";
-import { ChakraUIRender } from "../../utils/chakra-ui-render";
+import type { PageProps } from "../../components/page/Page.types";
+import { chakraUiRender } from "../../utils/chakra-ui-render";
 import { Playground } from "./Playground";
 
 jest.mock("../../components/page/Page", () => ({
@@ -12,7 +12,7 @@ jest.mock("../../components/page/Page", () => ({
   ),
 }));
 
-const render = () => ChakraUIRender(<Playground />);
+const render = () => chakraUiRender(<Playground />);
 
 describe("Playground", () => {
   it("renders", () => {

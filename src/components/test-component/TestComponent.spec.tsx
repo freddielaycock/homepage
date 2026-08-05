@@ -1,8 +1,8 @@
 import { screen } from "@testing-library/react";
-import { ChakraUIRender } from "../../utils/chakra-ui-render";
+import { chakraUiRender } from "../../utils/chakra-ui-render";
 import { TestComponent } from "./TestComponent";
 
-const render = (text?: string) => ChakraUIRender(<TestComponent text={text} />);
+const render = (text?: string) => chakraUiRender(<TestComponent text={text} />);
 
 describe("TestComponent", () => {
   it("renders", () => {
@@ -14,6 +14,6 @@ describe("TestComponent", () => {
   it("does not render a Text component if no text is provided", () => {
     render();
 
-    expect(screen.queryByTestId("test-component-test")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("test-component-text")).not.toBeInTheDocument();
   });
 });

@@ -1,9 +1,9 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { ChakraUIRender } from "../../utils/chakra-ui-render";
+import { chakraUiRender } from "../../utils/chakra-ui-render";
 import { ThemeToggle } from "./ThemeToggle";
 
-const render = (component: React.ReactNode) => ChakraUIRender(component);
+const render = (component: React.ReactNode) => chakraUiRender(component);
 
 describe("ThemeToggle", () => {
   it("renders the toggle button", () => {

@@ -1,8 +1,18 @@
 import { Box } from "@chakra-ui/react";
 import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+import { lazy, Suspense } from "react";
 
 import { ThemeToggle } from "../components/theme-toggle/ThemeToggle";
+
+// excluded from production bundle via process.env.NODE_ENV define in esbuild
+const TanStackRouterDevtools =
+  process.env.NODE_ENV === "production"
+    ? () => null
+    : lazy(() =>
+        import("@tanstack/react-router-devtools").then((mod) => ({
+          default: mod.TanStackRouterDevtools,
+        }))
+      );
 
 const RootLayout = () => (
   <>
@@ -21,7 +31,9 @@ const RootLayout = () => (
     </Box>
     <hr />
     <Outlet />
-    <TanStackRouterDevtools />
+    <Suspense>
+      <TanStackRouterDevtools />
+    </Suspense>
   </>
 );
 

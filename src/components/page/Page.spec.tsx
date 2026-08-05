@@ -1,10 +1,10 @@
 import { screen } from "@testing-library/react";
-import { ChakraUIRender } from "../../utils/chakra-ui-render";
+import { chakraUiRender } from "../../utils/chakra-ui-render";
 import { Page } from "./Page";
-import type { PageProps } from "./Pages.types";
+import type { PageProps } from "./Page.types";
 
 const render = ({ heading, id, children }: PageProps) =>
-  ChakraUIRender(
+  chakraUiRender(
     <Page heading={heading} id={id}>
       {children}
     </Page>,
