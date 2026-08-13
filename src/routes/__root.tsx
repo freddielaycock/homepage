@@ -16,7 +16,7 @@ const TanStackRouterDevtools =
 
 const RootLayout = () => (
   <>
-    <Box px={2} py={4} display="flex" alignItems="center">
+    <Box p={2} display="flex" alignItems="center">
       <Box display="flex" gap={4}>
         <Link to="/" className="[&.active]:font-bold">
           Home
