@@ -25,7 +25,9 @@ export const Career: FC = () => (
                 <Accordion.ItemIndicator />
               </Accordion.ItemTrigger>
               <Accordion.ItemContent>
-                <Text pb={4}>{content}</Text>
+                <Text pb={4} textAlign="left">
+                  {content}
+                </Text>
               </Accordion.ItemContent>
             </Accordion.Item>
           ),
