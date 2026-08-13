@@ -21,7 +21,7 @@ const Bold: FC<{ children: React.ReactNode }> = ({ children }) => (
 export const Home: FC = () => (
   <Page heading="" id="home">
     <Box
-      maxW="80%"
+      maxW={{ base: "90%", sm: "80%", md: "60%", lg: "50%" }}
       mx="auto"
       textAlign="center"
       alignItems="center"
@@ -39,7 +39,7 @@ export const Home: FC = () => (
       </Text>
       <Image
         height="300px"
-        src="/public/images/website-photo.jpg"
+        src="/public/images/website-photo.webp"
         alt="Freddie Laycock"
         rounded="full"
         marginY={4}

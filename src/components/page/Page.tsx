@@ -6,7 +6,7 @@ import type { PageProps } from "./Page.types";
 
 const PageWrapper = styled.div`
   margin: auto;
-  padding: 16px;
+  padding: 32px 16px;
   text-align: center;
 `;
 
