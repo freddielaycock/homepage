@@ -19,7 +19,7 @@ const Bold: FC<{ children: React.ReactNode }> = ({ children }) => (
 );
 
 export const Home: FC = () => (
-  <Page heading="" id="home">
+  <Page heading="Welcome" id="home">
     <Box
       maxW={{ base: "90%", sm: "80%", md: "60%", lg: "50%" }}
       mx="auto"
@@ -30,7 +30,7 @@ export const Home: FC = () => (
       gap={2}
     >
       <Text>
-        Hello! My name is Freddie Laycock, and this is my website! I am a{" "}
+        My name is Freddie Laycock, and this is my website! I am a{" "}
         <Bold>Senior Software Engineer</Bold> currently working at{" "}
         <Bold>Sky</Bold> in <Bold>Leeds, UK</Bold>. I have a passion for
         building software that is both <Bold>scalable</Bold> and{" "}
