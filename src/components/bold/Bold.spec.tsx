@@ -5,7 +5,7 @@ import { Bold } from "./Bold";
 
 describe("Bold", () => {
   it("renders correctly", () => {
-    chakraUiRender(<Bold>Test</Bold>);
+    chakraUiRender(<Bold text="Test" />);
 
     expect(screen.getByTestId("bold-text")).toMatchSnapshot();
   });

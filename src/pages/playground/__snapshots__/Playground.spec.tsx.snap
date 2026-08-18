@@ -63,6 +63,17 @@ exports[`Playground renders 1`] = `
           >
             <button
               class="chakra-button css-11dsb6w"
+              data-test-id="playground-bold-button"
+              type="button"
+            >
+              Bold Text
+            </button>
+          </div>
+          <div
+            class="css-xruegh"
+          >
+            <button
+              class="chakra-button css-4xfxjp"
               data-test-id="playground-page-button"
               type="button"
             >
@@ -95,12 +106,11 @@ exports[`Playground renders 1`] = `
       </div>
     </div>
   </div>
-  <div
-    data-test-id="test-page-page"
+  <span
+    class="css-7oa3gt"
+    data-test-id="bold-text"
   >
-    <h1>
-      Test Page
-    </h1>
-  </div>
+    This is bold text
+  </span>
 </div>
 `;

@@ -5,4 +5,5 @@ export type PlaygroundEntry<P extends object = object> = {
   component: ComponentType<P>;
   id: string;
   props: P;
+  children?: React.ReactNode;
 };

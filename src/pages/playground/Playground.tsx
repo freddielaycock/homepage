@@ -62,7 +62,11 @@ export const Playground: FC = () => {
         </ScrollArea.Root>
       </VStack>
 
-      {createElement(selectedComponent.component, selectedComponent.props)}
+      {createElement(
+        selectedComponent.component,
+        selectedComponent.props,
+        ...[selectedComponent.children],
+      )}
     </Page>
   );
 };

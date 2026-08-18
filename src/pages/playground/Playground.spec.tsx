@@ -37,7 +37,7 @@ describe("Playground", () => {
   it("renders the selected component", () => {
     render();
 
-    expect(screen.getByText("Test Page")).toBeInTheDocument();
+    expect(screen.getByText("This is bold text")).toBeInTheDocument();
   });
 
   it("renders the selected component when a button is clicked", async () => {
