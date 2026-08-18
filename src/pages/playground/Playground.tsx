@@ -62,7 +62,7 @@ export const Playground: FC = () => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          bg="#fff"
+          bg="bg.plain"
           p={4}
           rounded={4}
         >

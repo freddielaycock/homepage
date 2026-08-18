@@ -14,10 +14,16 @@ const config = defineConfig({
           DEFAULT: {
             value: { _light: "#f1f1f1", _dark: "#333333" },
           },
+          plain: {
+            value: { _light: "#ffffff", _dark: "#000000" },
+          },
         },
         fg: {
           DEFAULT: {
             value: { _light: "#333333", _dark: "#f1f1f1" },
+          },
+          plain: {
+            value: { _light: "#000000", _dark: "#ffffff" },
           },
         },
       },
