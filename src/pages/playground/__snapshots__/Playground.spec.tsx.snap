@@ -16,7 +16,7 @@ exports[`Playground renders 1`] = `
     role="separator"
   />
   <div
-    class="chakra-stack css-b769mm"
+    class="chakra-stack css-3tgjim"
   >
     <p
       class="css-uok8h6"
@@ -24,93 +24,101 @@ exports[`Playground renders 1`] = `
       Components
     </p>
     <div
-      class="chakra-scroll-area__root css-7s6lek"
-      data-overflow-x=""
-      data-overflow-y=""
-      data-part="root"
-      data-scope="scroll-area"
-      dir="ltr"
-      id="scroll-area-_r_0_"
-      role="presentation"
-      style="position: relative; --corner-width: 0px; --corner-height: 0px; --thumb-width: 0px; --thumb-height: 0px;"
+      class="chakra-stack css-13yrnis"
     >
       <div
-        class="chakra-scroll-area__viewport css-5n28yg"
-        data-at-left=""
-        data-at-top=""
+        class="chakra-scroll-area__root css-bs6okx"
         data-overflow-x=""
         data-overflow-y=""
-        data-ownedby="scroll-area-_r_0_"
-        data-part="viewport"
+        data-part="root"
         data-scope="scroll-area"
-        id="scroll-area-_r_0_:viewport"
+        dir="ltr"
+        id="scroll-area-_r_0_"
         role="presentation"
-        style="overflow: auto;"
-        tabindex="0"
+        style="position: relative; --corner-width: 0px; --corner-height: 0px; --thumb-width: 0px; --thumb-height: 0px;"
       >
         <div
-          class="chakra-scroll-area__content css-1pdwgr6"
+          class="chakra-scroll-area__viewport css-5n28yg"
+          data-at-left=""
+          data-at-top=""
           data-overflow-x=""
           data-overflow-y=""
-          data-part="content"
+          data-ownedby="scroll-area-_r_0_"
+          data-part="viewport"
           data-scope="scroll-area"
-          id="scroll-area-_r_0_:content"
+          id="scroll-area-_r_0_:viewport"
           role="presentation"
-          style="min-width: fit-content;"
+          style="overflow: auto;"
+          tabindex="0"
         >
           <div
-            class="css-xruegh"
+            class="chakra-scroll-area__content css-1pdwgr6"
+            data-overflow-x=""
+            data-overflow-y=""
+            data-part="content"
+            data-scope="scroll-area"
+            id="scroll-area-_r_0_:content"
+            role="presentation"
+            style="min-width: fit-content;"
           >
-            <button
-              class="chakra-button css-11dsb6w"
-              data-test-id="playground-bold-button"
-              type="button"
+            <div
+              class="css-xruegh"
             >
-              Bold Text
-            </button>
-          </div>
-          <div
-            class="css-xruegh"
-          >
-            <button
-              class="chakra-button css-4xfxjp"
-              data-test-id="playground-page-button"
-              type="button"
+              <button
+                class="chakra-button css-15rakzp"
+                data-test-id="playground-bold-button"
+                type="button"
+              >
+                Bold Text
+              </button>
+            </div>
+            <div
+              class="css-xruegh"
             >
-              Page
-            </button>
-          </div>
-          <div
-            class="css-xruegh"
-          >
-            <button
-              class="chakra-button css-4xfxjp"
-              data-test-id="playground-test-component-button"
-              type="button"
+              <button
+                class="chakra-button css-18bidlc"
+                data-test-id="playground-page-button"
+                type="button"
+              >
+                Page
+              </button>
+            </div>
+            <div
+              class="css-xruegh"
             >
-              Test Component
-            </button>
-          </div>
-          <div
-            class="css-xruegh"
-          >
-            <button
-              class="chakra-button css-4xfxjp"
-              data-test-id="playground-theme-toggle-button"
-              type="button"
+              <button
+                class="chakra-button css-18bidlc"
+                data-test-id="playground-test-component-button"
+                type="button"
+              >
+                Test Component
+              </button>
+            </div>
+            <div
+              class="css-xruegh"
             >
-              Theme Toggle
-            </button>
+              <button
+                class="chakra-button css-18bidlc"
+                data-test-id="playground-theme-toggle-button"
+                type="button"
+              >
+                Theme Toggle
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      <div
+        class="css-14hqxdt"
+      >
+        <span
+          class="css-7oa3gt"
+          data-test-id="bold-text"
+        >
+          This is bold text
+        </span>
+      </div>
     </div>
   </div>
-  <span
-    class="css-7oa3gt"
-    data-test-id="bold-text"
-  >
-    This is bold text
-  </span>
 </div>
 `;

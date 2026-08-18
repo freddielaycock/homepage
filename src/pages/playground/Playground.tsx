@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  HStack,
   ScrollArea,
   Separator,
   Text,
@@ -24,49 +25,52 @@ export const Playground: FC = () => {
         components in isolation, before then integrating them into pages.
       </Text>
       <Separator my={4} />
-      <VStack
-        align="left"
-        gap={2}
-        position="fixed"
-        left={4}
-        top={56}
-        maxH="80vh"
-        overflowY="auto"
-      >
+      <VStack gap={2} textAlign="left" align="start">
         <Text fontSize="lg">Components</Text>
-        <ScrollArea.Root variant="hover">
-          <ScrollArea.Viewport>
-            <ScrollArea.Content paddingEnd="3" spaceY="4" textStyle="sm">
-              {PLAYGROUND_COMPONENTS.map(
-                ({ name, component, id, props }: PlaygroundEntry) => (
-                  <Box key={id} gap={2}>
-                    <Button
-                      colorPalette="gray"
-                      data-test-id={`playground-${id}-button`}
-                      onClick={() =>
-                        setSelectedComponent({ name, component, id, props })
-                      }
-                      variant="surface"
-                      {...(selectedComponent.id === id && {
-                        variant: "solid",
-                        colorPalette: "orange",
-                      })}
-                    >
-                      {name}
-                    </Button>
-                  </Box>
-                ),
-              )}
-            </ScrollArea.Content>
-          </ScrollArea.Viewport>
-        </ScrollArea.Root>
+        <HStack gap={4} align="start" width="100%" height="80vh">
+          <ScrollArea.Root variant="hover" width="200px" height="100%">
+            <ScrollArea.Viewport>
+              <ScrollArea.Content paddingEnd="3" spaceY="4" textStyle="sm">
+                {PLAYGROUND_COMPONENTS.map(
+                  ({ name, component, id, props }: PlaygroundEntry) => (
+                    <Box key={id} gap={2}>
+                      <Button
+                        colorPalette="gray"
+                        data-test-id={`playground-${id}-button`}
+                        onClick={() =>
+                          setSelectedComponent({ name, component, id, props })
+                        }
+                        variant="surface"
+                        width="100%"
+                        {...(selectedComponent.id === id && {
+                          variant: "solid",
+                          colorPalette: "orange",
+                        })}
+                      >
+                        {name}
+                      </Button>
+                    </Box>
+                  ),
+                )}
+              </ScrollArea.Content>
+            </ScrollArea.Viewport>
+          </ScrollArea.Root>
+          <Box
+            flex="1"
+            overflowY="auto"
+            paddingX={4}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            {createElement(
+              selectedComponent.component,
+              selectedComponent.props,
+              ...[selectedComponent.children],
+            )}
+          </Box>
+        </HStack>
       </VStack>
-
-      {createElement(
-        selectedComponent.component,
-        selectedComponent.props,
-        ...[selectedComponent.children],
-      )}
     </Page>
   );
 };

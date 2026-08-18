@@ -14,7 +14,10 @@ import { Bold } from "../../components/bold/Bold";
 import { Page } from "../../components/page/Page";
 
 export const Home: FC = () => (
-  <Page heading="Welcome" id="home">
+  <Page
+    heading="Welcome (NOTE: This website is still under construction)"
+    id="home"
+  >
     <Box
       maxW={{ base: "90%", sm: "80%", md: "60%", lg: "50%" }}
       mx="auto"
@@ -26,10 +29,10 @@ export const Home: FC = () => (
     >
       <Text>
         My name is Freddie Laycock, and this is my website! I am a{" "}
-        <Bold>Senior Software Engineer</Bold> currently working at{" "}
-        <Bold>Sky</Bold> in <Bold>Leeds, UK</Bold>. I have a passion for
-        building software that is both <Bold>scalable</Bold> and{" "}
-        <Bold>maintainable</Bold>, and I enjoy working on projects that
+        <Bold text="Senior Software Engineer" /> currently working at{" "}
+        <Bold text="Sky" /> in <Bold text="Leeds, UK" />. I have a passion for
+        building software that is both <Bold text="scalable" /> and{" "}
+        <Bold text="maintainable" />, and I enjoy working on projects that
         challenge me to learn new things.
       </Text>
       <Image
@@ -41,15 +44,13 @@ export const Home: FC = () => (
       />
       <Text>
         A little about me; I am a{" "}
-        <Bold>
-          1st-class Mathematics graduate from the University of Sheffield
-        </Bold>
-        , and have worked as both a <Bold>full-stack</Bold> and{" "}
-        <Bold>front-end developer</Bold> for 7 years. I have experience in
-        <Bold> web-design</Bold>, setting up <Bold>backends and frontends</Bold>
-        , <Bold>CI/CD pipelines</Bold>, as well as{" "}
-        <Bold>SEO optimisation </Bold>
-        and <Bold>experimentation</Bold>.
+        <Bold text="1st-class Mathematics graduate from the University of Sheffield" />
+        , and have worked as both a <Bold text="full-stack" /> and{" "}
+        <Bold text="front-end developer" /> for 7 years. I have experience in
+        <Bold text="web-design" />, setting up{" "}
+        <Bold text="backends and frontends" />, <Bold text="CI/CD pipelines" />,
+        as well as <Bold text="SEO optimisation" />
+        and <Bold text="experimentation" />.
       </Text>
       <HStack
         gap={4}
@@ -69,11 +70,12 @@ export const Home: FC = () => (
         <SiChakraui size={30} />
       </HStack>
       <Text>
-        Most of my recent work has been in <Bold>ecommerce</Bold>, working with{" "}
-        <Bold>legacy systems</Bold> as well as{" "}
-        <Bold>cutting-edge technologies</Bold>, with particular focuses on{" "}
-        <Bold>performance optimisation</Bold>, <Bold>user experience</Bold> and{" "}
-        <Bold>modernising old platforms</Bold>.
+        Most of my recent work has been in <Bold text="ecommerce" />, working
+        with <Bold text="legacy systems" /> as well as{" "}
+        <Bold text="cutting-edge technologies" />, with particular focuses on{" "}
+        <Bold text="performance optimisation" />,{" "}
+        <Bold text="user experience" /> and{" "}
+        <Bold text="modernising old platforms" />.
       </Text>
     </Box>
   </Page>
