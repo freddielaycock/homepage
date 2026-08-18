@@ -1,17 +1,17 @@
 declare module "*.css";
 declare module "*.jpg" {
-	const src: string;
-	export default src;
+  const src: string;
+  export default src;
 }
 
 declare module "*.jpeg" {
-	const src: string;
-	export default src;
+  const src: string;
+  export default src;
 }
 
 declare module "*.png" {
-	const src: string;
-	export default src;
+  const src: string;
+  export default src;
 }
 
 declare const process: { env: { NODE_ENV: string } };
