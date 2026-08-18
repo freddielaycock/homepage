@@ -4,6 +4,12 @@ import type { PageProps } from "../../components/page/Page.types";
 import { chakraUiRender } from "../../utils/chakra-ui-render";
 import { Home } from "./Home";
 
+jest.mock("../../components/bold/Bold", () => ({
+  Bold: ({ children }: { children: React.ReactNode }) => (
+    <span data-test-id="bold-text">{children}</span>
+  ),
+}));
+
 jest.mock("../../components/page/Page", () => ({
   Page: ({ heading, id, children }: PageProps) => (
     <div data-test-id={`${id}-page`}>

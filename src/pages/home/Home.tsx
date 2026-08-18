@@ -10,13 +10,8 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
+import { Bold } from "../../components/bold/Bold";
 import { Page } from "../../components/page/Page";
-
-const Bold: FC<{ children: React.ReactNode }> = ({ children }) => (
-  <Text as="span" fontWeight="bold">
-    {children}
-  </Text>
-);
 
 export const Home: FC = () => (
   <Page heading="Welcome" id="home">

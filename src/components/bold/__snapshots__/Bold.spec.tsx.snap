@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Bold renders correctly 1`] = `
+<span
+  class="css-7oa3gt"
+  data-test-id="bold-text"
+>
+  Test
+</span>
+`;
