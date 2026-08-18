@@ -5,7 +5,7 @@ exports[`Home renders 1`] = `
   data-test-id="home-page"
 >
   <h1>
-    Welcome
+    Welcome (NOTE: This website is still under construction)
   </h1>
   <div
     class="css-1q5f2rr"
@@ -15,35 +15,25 @@ exports[`Home renders 1`] = `
        
       <span
         data-test-id="bold-text"
-      >
-        Senior Software Engineer
-      </span>
+      />
        currently working at
        
       <span
         data-test-id="bold-text"
-      >
-        Sky
-      </span>
+      />
        in 
       <span
         data-test-id="bold-text"
-      >
-        Leeds, UK
-      </span>
+      />
       . I have a passion for building software that is both 
       <span
         data-test-id="bold-text"
-      >
-        scalable
-      </span>
+      />
        and
        
       <span
         data-test-id="bold-text"
-      >
-        maintainable
-      </span>
+      />
       , and I enjoy working on projects that challenge me to learn new things.
     </p>
     <img
@@ -56,53 +46,37 @@ exports[`Home renders 1`] = `
        
       <span
         data-test-id="bold-text"
-      >
-        1st-class Mathematics graduate from the University of Sheffield
-      </span>
+      />
       , and have worked as both a 
       <span
         data-test-id="bold-text"
-      >
-        full-stack
-      </span>
+      />
        and
        
       <span
         data-test-id="bold-text"
-      >
-        front-end developer
-      </span>
+      />
        for 7 years. I have experience in
       <span
         data-test-id="bold-text"
-      >
-         web-design
-      </span>
-      , setting up 
-      <span
-        data-test-id="bold-text"
-      >
-        backends and frontends
-      </span>
-      , 
-      <span
-        data-test-id="bold-text"
-      >
-        CI/CD pipelines
-      </span>
-      , as well as
+      />
+      , setting up
        
       <span
         data-test-id="bold-text"
-      >
-        SEO optimisation 
-      </span>
+      />
+      , 
+      <span
+        data-test-id="bold-text"
+      />
+      , as well as 
+      <span
+        data-test-id="bold-text"
+      />
       and 
       <span
         data-test-id="bold-text"
-      >
-        experimentation
-      </span>
+      />
       .
     </p>
     <div
@@ -236,43 +210,31 @@ exports[`Home renders 1`] = `
       Most of my recent work has been in 
       <span
         data-test-id="bold-text"
-      >
-        ecommerce
-      </span>
-      , working with
-       
+      />
+      , working with 
       <span
         data-test-id="bold-text"
-      >
-        legacy systems
-      </span>
+      />
        as well as
        
       <span
         data-test-id="bold-text"
-      >
-        cutting-edge technologies
-      </span>
+      />
       , with particular focuses on
        
       <span
         data-test-id="bold-text"
-      >
-        performance optimisation
-      </span>
-      , 
+      />
+      ,
+       
       <span
         data-test-id="bold-text"
-      >
-        user experience
-      </span>
+      />
        and
        
       <span
         data-test-id="bold-text"
-      >
-        modernising old platforms
-      </span>
+      />
       .
     </p>
   </div>

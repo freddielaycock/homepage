@@ -25,10 +25,10 @@ export const Playground: FC = () => {
         components in isolation, before then integrating them into pages.
       </Text>
       <Separator my={4} />
-      <VStack gap={2} textAlign="left" align="start">
-        <Text fontSize="lg">Components</Text>
-        <HStack gap={4} align="start" width="100%" height="80vh">
-          <ScrollArea.Root variant="hover" width="200px" height="100%">
+      <HStack gap={4} align="start" width="100%" height="80vh">
+        <VStack gap={2} textAlign="left" align="start">
+          <Text fontSize="lg">Components</Text>
+          <ScrollArea.Root variant="hover" width="200px" height="80vh">
             <ScrollArea.Viewport>
               <ScrollArea.Content paddingEnd="3" spaceY="4" textStyle="sm">
                 {PLAYGROUND_COMPONENTS.map(
@@ -55,22 +55,24 @@ export const Playground: FC = () => {
               </ScrollArea.Content>
             </ScrollArea.Viewport>
           </ScrollArea.Root>
-          <Box
-            flex="1"
-            overflowY="auto"
-            paddingX={4}
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            {createElement(
-              selectedComponent.component,
-              selectedComponent.props,
-              ...[selectedComponent.children],
-            )}
-          </Box>
-        </HStack>
-      </VStack>
+        </VStack>
+        <Box
+          flex="1"
+          overflowY="auto"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          bg="#fff"
+          p={4}
+          rounded={4}
+        >
+          {createElement(
+            selectedComponent.component,
+            selectedComponent.props,
+            ...[selectedComponent.children],
+          )}
+        </Box>
+      </HStack>
     </Page>
   );
 };

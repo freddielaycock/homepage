@@ -16,18 +16,18 @@ exports[`Playground renders 1`] = `
     role="separator"
   />
   <div
-    class="chakra-stack css-3tgjim"
+    class="chakra-stack css-13yrnis"
   >
-    <p
-      class="css-uok8h6"
-    >
-      Components
-    </p>
     <div
-      class="chakra-stack css-13yrnis"
+      class="chakra-stack css-3tgjim"
     >
+      <p
+        class="css-uok8h6"
+      >
+        Components
+      </p>
       <div
-        class="chakra-scroll-area__root css-bs6okx"
+        class="chakra-scroll-area__root css-5lg7wh"
         data-overflow-x=""
         data-overflow-y=""
         data-part="root"
@@ -108,16 +108,16 @@ exports[`Playground renders 1`] = `
           </div>
         </div>
       </div>
-      <div
-        class="css-14hqxdt"
+    </div>
+    <div
+      class="css-3d4fa8"
+    >
+      <span
+        class="css-7oa3gt"
+        data-test-id="bold-text"
       >
-        <span
-          class="css-7oa3gt"
-          data-test-id="bold-text"
-        >
-          This is bold text
-        </span>
-      </div>
+        This is bold text
+      </span>
     </div>
   </div>
 </div>
