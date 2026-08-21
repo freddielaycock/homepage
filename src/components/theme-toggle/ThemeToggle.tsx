@@ -7,7 +7,7 @@ export const ThemeToggle: FC = () => {
 
   return (
     <Button variant="outline" onClick={toggleColorMode}>
-      {colorMode === "light" ? "Dark?" : "Light?"}
+      {colorMode === "light" ? "Dark Mode" : "Light Mode"}
     </Button>
   );
 };

@@ -14,10 +14,7 @@ import { Bold } from "../../components/bold/Bold";
 import { Page } from "../../components/page/Page";
 
 export const Home: FC = () => (
-  <Page
-    heading="Welcome (NOTE: This website is still under construction)"
-    id="home"
-  >
+  <Page heading="Welcome" id="home">
     <Box
       maxW={{ base: "90%", sm: "80%", md: "60%", lg: "50%" }}
       mx="auto"
@@ -46,11 +43,11 @@ export const Home: FC = () => (
         A little about me; I am a{" "}
         <Bold text="1st-class Mathematics graduate from the University of Sheffield" />
         , and have worked as both a <Bold text="full-stack" /> and{" "}
-        <Bold text="front-end developer" /> for 7 years. I have experience in
+        <Bold text="front-end developer" /> for 7 years. I have experience in{" "}
         <Bold text="web-design" />, setting up{" "}
         <Bold text="backends and frontends" />, <Bold text="CI/CD pipelines" />,
-        as well as <Bold text="SEO optimisation" />
-        and <Bold text="experimentation" />.
+        as well as <Bold text="SEO optimisation" /> and{" "}
+        <Bold text="experimentation" />.
       </Text>
       <HStack
         gap={4}

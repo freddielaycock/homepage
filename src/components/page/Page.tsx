@@ -21,7 +21,7 @@ export const Page: FC<PageProps> = ({
     $padding={heading ? "16px" : "32px 16px"}
   >
     {heading && (
-      <Heading p={4} size={headingSize}>
+      <Heading as="h1" p={4} size={headingSize}>
         {heading}
       </Heading>
     )}

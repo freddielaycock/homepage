@@ -5,7 +5,7 @@ exports[`Home renders 1`] = `
   data-test-id="home-page"
 >
   <h1>
-    Welcome (NOTE: This website is still under construction)
+    Welcome
   </h1>
   <div
     class="css-1q5f2rr"
@@ -57,6 +57,7 @@ exports[`Home renders 1`] = `
         data-test-id="bold-text"
       />
        for 7 years. I have experience in
+       
       <span
         data-test-id="bold-text"
       />
@@ -73,7 +74,8 @@ exports[`Home renders 1`] = `
       <span
         data-test-id="bold-text"
       />
-      and 
+       and
+       
       <span
         data-test-id="bold-text"
       />

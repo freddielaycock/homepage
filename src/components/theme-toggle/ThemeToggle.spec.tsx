@@ -19,14 +19,14 @@ describe("ThemeToggle", () => {
 
     const buttonElement = screen.getByRole("button");
 
-    expect(buttonElement).toHaveTextContent("Dark?");
+    expect(buttonElement).toHaveTextContent("Dark Mode");
 
     await userEvent.click(buttonElement);
 
-    expect(buttonElement).toHaveTextContent("Light?");
+    expect(buttonElement).toHaveTextContent("Light Mode");
 
     await userEvent.click(buttonElement);
 
-    expect(buttonElement).toHaveTextContent("Dark?");
+    expect(buttonElement).toHaveTextContent("Dark Mode");
   });
 });
