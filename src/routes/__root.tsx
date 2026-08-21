@@ -1,41 +1,10 @@
 import { Box, Link } from "@chakra-ui/react";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
-import { lazy, Suspense, useState } from "react";
+import { useState } from "react";
 
 import { ThemeToggle } from "../components/theme-toggle/ThemeToggle";
-
-// excluded from production bundle via process.env.NODE_ENV define in esbuild
-const TanStackRouterDevtools =
-  process.env.NODE_ENV === "production"
-    ? () => null
-    : lazy(() =>
-        import("@tanstack/react-router-devtools").then((mod) => ({
-          default: mod.TanStackRouterDevtools,
-        })),
-      );
-
-const routes = [
-  {
-    id: "home",
-    title: "Home",
-    path: "/",
-  },
-  {
-    id: "career",
-    title: "Career",
-    path: "/career",
-  },
-  {
-    id: "playground",
-    title: "Playground",
-    path: "/playground",
-  },
-  {
-    id: "projects",
-    title: "Projects",
-    path: "/projects",
-  },
-];
+import { ROUTES } from "./-constants";
+import type { RouteType } from "./-types";
 
 const RootLayout = () => {
   const [active, setActive] = useState(window.location.pathname);
@@ -44,7 +13,7 @@ const RootLayout = () => {
     <>
       <Box p={2} display="flex" alignItems="center">
         <Box display="flex" gap={4}>
-          {routes.map(({ id, title, path }) => (
+          {ROUTES.map(({ id, title, path }: RouteType) => (
             <Link
               key={id}
               href={path}
@@ -61,9 +30,6 @@ const RootLayout = () => {
       </Box>
       <hr />
       <Outlet />
-      <Suspense>
-        <TanStackRouterDevtools />
-      </Suspense>
     </>
   );
 };
