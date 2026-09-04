@@ -1,4 +1,5 @@
 import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Link } from "@tanstack/react-router";
 import type { FC } from "react";
 
 import { Page } from "../../components/page/Page";
@@ -16,7 +17,7 @@ export const Projects: FC = () => (
         <GridItem>
           <Box borderWidth="2px" borderRadius="lg" p={4}>
             <Text fontSize="lg" fontWeight="bold">
-              Projects to be added!
+              <Link to="/projects/rhythms">Rhythms</Link>
             </Text>
           </Box>
         </GridItem>
