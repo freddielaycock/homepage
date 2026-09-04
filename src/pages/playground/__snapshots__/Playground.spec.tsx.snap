@@ -77,6 +77,17 @@ exports[`Playground renders 1`] = `
             >
               <button
                 class="chakra-button css-18bidlc"
+                data-test-id="playground-example-canvas-button"
+                type="button"
+              >
+                Example Canvas
+              </button>
+            </div>
+            <div
+              class="css-xruegh"
+            >
+              <button
+                class="chakra-button css-18bidlc"
                 data-test-id="playground-page-button"
                 type="button"
               >

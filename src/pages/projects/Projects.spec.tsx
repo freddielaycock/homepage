@@ -5,6 +5,12 @@ import { Projects } from "./Projects";
 
 const render = () => chakraUiRender(<Projects />);
 
+jest.mock("@tanstack/react-router", () => ({
+  Link: ({ to, children }: { to: string; children: React.ReactNode }) => (
+    <a href={to}>{children}</a>
+  ),
+}));
+
 jest.mock("../../components/page/Page", () => ({
   Page: ({ heading, id, children }: PageProps) => (
     <div data-test-id={`${id}-page`}>

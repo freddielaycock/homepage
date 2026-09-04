@@ -1,4 +1,7 @@
 import { Bold } from "../../components/bold/Bold";
+import type { CanvasFunction } from "../../components/canvas/Canvas.types";
+import { ExampleCanvas } from "../../components/canvas/ExampleCanvas";
+import { drawStraightLine } from "../../components/canvas/utils/draw-line";
 import { Page } from "../../components/page/Page";
 import { TestComponent } from "../../components/test-component/TestComponent";
 import { ThemeToggle } from "../../components/theme-toggle/ThemeToggle";
@@ -11,6 +14,24 @@ export const PLAYGROUND_COMPONENTS: PlaygroundEntry[] = [
     id: "bold",
     props: {
       text: "This is bold text",
+    },
+  },
+  {
+    name: "Example Canvas",
+    component: ExampleCanvas,
+    id: "example-canvas",
+    props: {
+      canvasFunction: ({ ctx, height }: Parameters<CanvasFunction>[0]) => {
+        for (let index = 0; index < 100; index++) {
+          drawStraightLine({
+            ctx,
+            startX: index * 10,
+            startY: 0,
+            endX: index / 10,
+            endY: height,
+          });
+        }
+      },
     },
   },
   {

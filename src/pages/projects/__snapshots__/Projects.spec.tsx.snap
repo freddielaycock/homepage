@@ -23,7 +23,11 @@ exports[`Projects renders 1`] = `
           <p
             class="css-p998o2"
           >
-            Projects to be added!
+            <a
+              href="/projects/rhythms"
+            >
+              Rhythms
+            </a>
           </p>
         </div>
       </div>
