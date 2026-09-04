@@ -3,6 +3,7 @@ import type { SetupCanvasOptions, SetupCanvasProps } from "../Canvas.types";
 export const setupCanvas = ({
   canvas,
   canvasFunction,
+  aspectRatio,
 }: SetupCanvasOptions): SetupCanvasProps => {
   const ctx = canvas.getContext("2d");
 
@@ -11,8 +12,10 @@ export const setupCanvas = ({
   const resize = (): void => {
     const dpr = window.devicePixelRatio || 1;
     const bounds = canvas.parentElement?.getBoundingClientRect();
-    const height = bounds?.height ?? window.innerHeight;
     const width = bounds?.width ?? window.innerWidth;
+    const height = aspectRatio
+      ? width / aspectRatio
+      : (bounds?.height ?? window.innerHeight);
     canvas.height = Math.round(height * dpr);
     canvas.width = Math.round(width * dpr);
     canvas.style.height = `${height}px`;

@@ -71,6 +71,19 @@ describe("SetupCanvas", () => {
     expect(canvasFunction).toHaveBeenCalledTimes(1);
   });
 
+  it("uses the specified aspect ratio", () => {
+    const setup = setupCanvas({
+      canvas,
+      canvasFunction,
+      aspectRatio: 1,
+    });
+
+    expect(canvas.style.width).toBe("800px");
+    expect(canvas.style.height).toBe("800px");
+
+    setup.dispose();
+  });
+
   it("throws when a 2D drawing context is unavailable", () => {
     getContext.mockReturnValue(null);
 

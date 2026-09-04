@@ -17,6 +17,7 @@ export type ExampleCanvasProps = {
 export type SetupCanvasOptions = {
   canvas: HTMLCanvasElement;
   canvasFunction: CanvasFunction;
+  aspectRatio?: number;
 };
 
 export type SetupCanvasProps = {
