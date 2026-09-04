@@ -28,6 +28,11 @@ export const PLAYGROUND_COMPONENTS: PlaygroundEntry[] = [
         height,
         width,
       }: Parameters<CanvasFunction>[0]) => {
+        const gradient = ctx.createLinearGradient(20, 0, 620, 0);
+        gradient.addColorStop(0, "blue");
+        gradient.addColorStop(0.5, "orange");
+        gradient.addColorStop(1, "green");
+
         for (let index = 0; index < 30; index++) {
           drawStraightLine({
             ctx,
@@ -35,6 +40,7 @@ export const PLAYGROUND_COMPONENTS: PlaygroundEntry[] = [
             startY: 0,
             endX: index / 20,
             endY: height,
+            strokeStyle: "green",
           });
           drawQuadrilateral({
             ctx,
@@ -43,6 +49,7 @@ export const PLAYGROUND_COMPONENTS: PlaygroundEntry[] = [
             width: 20,
             height: height,
             filled: index % 2 === 0,
+            style: gradient,
           });
         }
         drawText({

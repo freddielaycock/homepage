@@ -27,13 +27,21 @@ describe("drawQuadrilateral", () => {
       width: 100,
       height: 100,
       filled: false,
+      style: "red",
     });
 
     expect(ctx.strokeRect).toHaveBeenCalledWith(0, 0, 100, 100);
   });
 
-  it("should draw an unfilled quadrilateral when filled is not undefined", () => {
-    drawQuadrilateral({ ctx, startX: 0, startY: 0, width: 100, height: 100 });
+  it("should draw an unfilled quadrilateral when filled is undefined", () => {
+    drawQuadrilateral({
+      ctx,
+      startX: 0,
+      startY: 0,
+      width: 100,
+      height: 100,
+      style: "green",
+    });
 
     expect(ctx.strokeRect).toHaveBeenCalledWith(0, 0, 100, 100);
   });

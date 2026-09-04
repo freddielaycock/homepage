@@ -15,11 +15,13 @@ describe("drawStraightLine", () => {
       startY: 20,
       endX: 30,
       endY: 40,
+      strokeStyle: "green",
     });
 
     expect(ctx.beginPath).toHaveBeenCalledTimes(1);
     expect(ctx.moveTo).toHaveBeenCalledWith(10, 20);
     expect(ctx.lineTo).toHaveBeenCalledWith(30, 40);
+    expect(ctx.strokeStyle).toBe("green");
     expect(ctx.stroke).toHaveBeenCalledTimes(1);
   });
 });

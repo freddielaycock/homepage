@@ -1,3 +1,15 @@
+type DrawTextProps = {
+  ctx: CanvasRenderingContext2D;
+  font?: string;
+  textAlign?: CanvasTextAlign;
+  textBaseline?: CanvasTextBaseline;
+  text: string;
+  startX: number;
+  startY: number;
+  maxWidth?: number;
+  style?: string;
+};
+
 export const drawText = ({
   ctx,
   font,
@@ -7,16 +19,8 @@ export const drawText = ({
   startX,
   startY,
   maxWidth,
-}: {
-  ctx: CanvasRenderingContext2D;
-  font?: string;
-  textAlign?: CanvasTextAlign;
-  textBaseline?: CanvasTextBaseline;
-  text: string;
-  startX: number;
-  startY: number;
-  maxWidth?: number;
-}) => {
+  style = "black",
+}: DrawTextProps) => {
   if (font) {
     ctx.font = font;
   }
@@ -28,5 +32,6 @@ export const drawText = ({
     ctx.textBaseline = textBaseline;
   }
 
+  ctx.fillStyle = style;
   ctx.fillText(text, startX, startY, maxWidth);
 };
