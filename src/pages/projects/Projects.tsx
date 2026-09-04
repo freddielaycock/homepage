@@ -17,7 +17,7 @@ export const Projects: FC = () => (
         <GridItem>
           <Box borderWidth="2px" borderRadius="lg" p={4}>
             <Text fontSize="lg" fontWeight="bold">
-              <Link to="/projects/rhythms">Rhythms</Link>
+              <Link to="/projects/pixels">Pixels</Link>
             </Text>
           </Box>
         </GridItem>

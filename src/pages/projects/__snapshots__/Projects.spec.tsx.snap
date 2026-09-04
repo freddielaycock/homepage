@@ -24,9 +24,9 @@ exports[`Projects renders 1`] = `
             class="css-p998o2"
           >
             <a
-              href="/projects/rhythms"
+              href="/projects/pixels"
             >
-              Rhythms
+              Pixels
             </a>
           </p>
         </div>

@@ -14,7 +14,7 @@ import { Route as CareerRouteImport } from './routes/career'
 import { Route as PlaygroundRouteImport } from './routes/playground'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
-import { Route as ProjectsRhythmsRouteImport } from './routes/projects.rhythms'
+import { Route as ProjectsPixelsRouteImport } from './routes/projects.pixels'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -41,9 +41,9 @@ const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => ProjectsRoute,
 } as any)
-const ProjectsRhythmsRoute = ProjectsRhythmsRouteImport.update({
-  id: '/rhythms',
-  path: '/rhythms',
+const ProjectsPixelsRoute = ProjectsPixelsRouteImport.update({
+  id: '/pixels',
+  path: '/pixels',
   getParentRoute: () => ProjectsRoute,
 } as any)
 
@@ -52,14 +52,14 @@ export interface FileRoutesByFullPath {
   '/career': typeof CareerRoute
   '/playground': typeof PlaygroundRoute
   '/projects': typeof ProjectsRouteWithChildren
-  '/projects/rhythms': typeof ProjectsRhythmsRoute
+  '/projects/pixels': typeof ProjectsPixelsRoute
   '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/career': typeof CareerRoute
   '/playground': typeof PlaygroundRoute
-  '/projects/rhythms': typeof ProjectsRhythmsRoute
+  '/projects/pixels': typeof ProjectsPixelsRoute
   '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
@@ -68,7 +68,7 @@ export interface FileRoutesById {
   '/career': typeof CareerRoute
   '/playground': typeof PlaygroundRoute
   '/projects': typeof ProjectsRouteWithChildren
-  '/projects/rhythms': typeof ProjectsRhythmsRoute
+  '/projects/pixels': typeof ProjectsPixelsRoute
   '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRouteTypes {
@@ -78,17 +78,17 @@ export interface FileRouteTypes {
     | '/career'
     | '/playground'
     | '/projects'
-    | '/projects/rhythms'
+    | '/projects/pixels'
     | '/projects/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/career' | '/playground' | '/projects/rhythms' | '/projects'
+  to: '/' | '/career' | '/playground' | '/projects/pixels' | '/projects'
   id:
     | '__root__'
     | '/'
     | '/career'
     | '/playground'
     | '/projects'
-    | '/projects/rhythms'
+    | '/projects/pixels'
     | '/projects/'
   fileRoutesById: FileRoutesById
 }
@@ -136,23 +136,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsIndexRouteImport
       parentRoute: typeof ProjectsRoute
     }
-    '/projects/rhythms': {
-      id: '/projects/rhythms'
-      path: '/rhythms'
-      fullPath: '/projects/rhythms'
-      preLoaderRoute: typeof ProjectsRhythmsRouteImport
+    '/projects/pixels': {
+      id: '/projects/pixels'
+      path: '/pixels'
+      fullPath: '/projects/pixels'
+      preLoaderRoute: typeof ProjectsPixelsRouteImport
       parentRoute: typeof ProjectsRoute
     }
   }
 }
 
 interface ProjectsRouteChildren {
-  ProjectsRhythmsRoute: typeof ProjectsRhythmsRoute
+  ProjectsPixelsRoute: typeof ProjectsPixelsRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
 const ProjectsRouteChildren: ProjectsRouteChildren = {
-  ProjectsRhythmsRoute: ProjectsRhythmsRoute,
+  ProjectsPixelsRoute: ProjectsPixelsRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }
 
