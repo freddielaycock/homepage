@@ -2,6 +2,8 @@ import { Bold } from "../../components/bold/Bold";
 import type { CanvasFunction } from "../../components/canvas/Canvas.types";
 import { ExampleCanvas } from "../../components/canvas/ExampleCanvas";
 import { drawStraightLine } from "../../components/canvas/utils/draw-line";
+import { drawQuadrilateral } from "../../components/canvas/utils/draw-quadrilateral";
+import { drawText } from "../../components/canvas/utils/draw-text";
 import { Page } from "../../components/page/Page";
 import { TestComponent } from "../../components/test-component/TestComponent";
 import { ThemeToggle } from "../../components/theme-toggle/ThemeToggle";
@@ -21,7 +23,11 @@ export const PLAYGROUND_COMPONENTS: PlaygroundEntry[] = [
     component: ExampleCanvas,
     id: "example-canvas",
     props: {
-      canvasFunction: ({ ctx, height }: Parameters<CanvasFunction>[0]) => {
+      canvasFunction: ({
+        ctx,
+        height,
+        width,
+      }: Parameters<CanvasFunction>[0]) => {
         for (let index = 0; index < 30; index++) {
           drawStraightLine({
             ctx,
@@ -30,7 +36,24 @@ export const PLAYGROUND_COMPONENTS: PlaygroundEntry[] = [
             endX: index / 20,
             endY: height,
           });
+          drawQuadrilateral({
+            ctx,
+            startX: index * 20,
+            startY: 0,
+            width: 20,
+            height: height,
+            filled: index % 2 === 0,
+          });
         }
+        drawText({
+          ctx,
+          font: "32px Arial",
+          textAlign: "right",
+          textBaseline: "middle",
+          text: "Playground Canvas",
+          startX: width - 20,
+          startY: height / 2,
+        });
       },
     },
   },
