@@ -41,6 +41,7 @@ describe("SetupCanvas", () => {
     expect(canvas.style.height).toBe("600px");
     expect(ctx.setTransform).toHaveBeenCalledWith(2, 0, 0, 2, 0, 0);
     expect(canvasFunction).toHaveBeenLastCalledWith({
+      canvas,
       ctx,
       width: 800,
       height: 600,
@@ -52,6 +53,7 @@ describe("SetupCanvas", () => {
     expect(canvas.width).toBe(2000);
     expect(canvas.height).toBe(1400);
     expect(canvasFunction).toHaveBeenLastCalledWith({
+      canvas,
       ctx,
       width: 1000,
       height: 700,

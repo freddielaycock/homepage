@@ -4,7 +4,10 @@ export type CanvasDimensions = {
 };
 
 export type CanvasFunction = (
-  canvas: CanvasDimensions & { ctx: CanvasRenderingContext2D },
+  canvas: CanvasDimensions & {
+    canvas: HTMLCanvasElement;
+    ctx: CanvasRenderingContext2D;
+  },
 ) => void;
 
 export type ExampleCanvasProps = {

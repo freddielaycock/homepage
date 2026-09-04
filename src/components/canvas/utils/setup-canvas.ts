@@ -10,14 +10,15 @@ export const setupCanvas = ({
 
   const resize = (): void => {
     const dpr = window.devicePixelRatio || 1;
-    const height = window.innerHeight;
-    const width = window.innerWidth;
+    const bounds = canvas.parentElement?.getBoundingClientRect();
+    const height = bounds?.height ?? window.innerHeight;
+    const width = bounds?.width ?? window.innerWidth;
     canvas.height = Math.round(height * dpr);
     canvas.width = Math.round(width * dpr);
     canvas.style.height = `${height}px`;
     canvas.style.width = `${width}px`;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    canvasFunction({ ctx, width, height });
+    canvasFunction({ canvas, ctx, width, height });
   };
 
   resize();

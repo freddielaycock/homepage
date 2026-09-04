@@ -22,12 +22,12 @@ export const PLAYGROUND_COMPONENTS: PlaygroundEntry[] = [
     id: "example-canvas",
     props: {
       canvasFunction: ({ ctx, height }: Parameters<CanvasFunction>[0]) => {
-        for (let index = 0; index < 100; index++) {
+        for (let index = 0; index < 30; index++) {
           drawStraightLine({
             ctx,
-            startX: index * 10,
+            startX: index * 20,
             startY: 0,
-            endX: index / 10,
+            endX: index / 20,
             endY: height,
           });
         }
