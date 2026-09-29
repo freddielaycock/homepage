@@ -11,7 +11,10 @@ export const Projects: FC = () => (
         This page houses a collection of my personal projects, which I have
         built to explore new technologies and ideas. These projects are a
         reflection of my curiosity and passion for learning, and I hope they
-        inspire others to pursue their own creative endeavors.
+        inspire others to pursue their own creative endeavors. <br />
+        <br /> NOTE: I recently reset these as part of the regeneration of my
+        website, so currently it's a little thin on the ground, but more
+        projects will be added soon!
       </Text>
       <Grid templateColumns="repeat(3, 1fr)" gap="6" pt={4}>
         <GridItem>

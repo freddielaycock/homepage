@@ -22,3 +22,5 @@ export const ROUTES: RouteType[] = [
     path: "/projects",
   },
 ];
+
+export const DEV_ONLY_ROUTES: string[] = ["playground"];

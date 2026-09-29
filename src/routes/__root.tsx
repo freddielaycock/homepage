@@ -3,17 +3,22 @@ import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { useState } from "react";
 
 import { ThemeToggle } from "../components/theme-toggle/ThemeToggle";
-import { ROUTES } from "./-constants";
+import { DEV_ONLY_ROUTES, ROUTES } from "./-constants";
 import type { RouteType } from "./-types";
 
 const RootLayout = () => {
   const [active, setActive] = useState(window.location.pathname);
 
+  const VISIBLE_ROUTES =
+    process.env.NODE_ENV === "production"
+      ? ROUTES.filter(({ id }) => !DEV_ONLY_ROUTES.includes(id))
+      : ROUTES;
+
   return (
     <>
       <Box p={2} display="flex" alignItems="center">
         <Box display="flex" gap={4}>
-          {ROUTES.map(({ id, title, path }: RouteType) => (
+          {VISIBLE_ROUTES.map(({ id, title, path }: RouteType) => (
             <Link
               key={id}
               href={path}
