@@ -1,7 +1,7 @@
 import type { CanvasFunction } from "../../../../../components/canvas/Canvas.types";
 import { drawQuadrilateral } from "../../../../../components/canvas/utils/draw-quadrilateral";
 
-export const pixelCanvasFunction = ({
+export const randomPixels = ({
   ctx,
   width,
   height,

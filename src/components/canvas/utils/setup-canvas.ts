@@ -4,6 +4,7 @@ export const setupCanvas = ({
   canvas,
   canvasFunction,
   aspectRatio,
+  margin = 0,
 }: SetupCanvasOptions): SetupCanvasProps => {
   const ctx = canvas.getContext("2d");
 
@@ -12,7 +13,7 @@ export const setupCanvas = ({
   const resize = (): void => {
     const dpr = window.devicePixelRatio || 1;
     const bounds = canvas.parentElement?.getBoundingClientRect();
-    const width = bounds?.width ?? window.innerWidth;
+    const width = (bounds?.width ?? window.innerWidth) - margin * 2;
     const height = aspectRatio
       ? width / aspectRatio
       : (bounds?.height ?? window.innerHeight);

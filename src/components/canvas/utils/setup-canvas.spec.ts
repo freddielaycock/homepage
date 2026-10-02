@@ -84,6 +84,19 @@ describe("SetupCanvas", () => {
     setup.dispose();
   });
 
+  it("uses the specified margin when provided", () => {
+    const setup = setupCanvas({
+      canvas,
+      canvasFunction,
+      margin: 50,
+    });
+
+    expect(canvas.style.width).toBe("700px");
+    expect(canvas.style.height).toBe("600px");
+
+    setup.dispose();
+  });
+
   it("throws when a 2D drawing context is unavailable", () => {
     getContext.mockReturnValue(null);
 

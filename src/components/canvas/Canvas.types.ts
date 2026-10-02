@@ -18,6 +18,7 @@ export type SetupCanvasOptions = {
   canvas: HTMLCanvasElement;
   canvasFunction: CanvasFunction;
   aspectRatio?: number;
+  margin?: number;
 };
 
 export type SetupCanvasProps = {
