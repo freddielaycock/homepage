@@ -4,6 +4,7 @@ export type PixelFunctionProps = {
   ctx: CanvasRenderingContext2D;
   width: number;
   height: number;
+  pixelsPerLine: number;
 } & CanvasFunctionAdditionalArgs;
 
 export type PixelCoords = {

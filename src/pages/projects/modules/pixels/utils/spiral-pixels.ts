@@ -41,9 +41,9 @@ export const spiralPixels: CanvasFunction = ({
   ctx,
   width,
   height,
+  pixelsPerLine,
   startingRgb = [255, 0, 0],
 }: PixelFunctionProps) => {
-  const pixelsPerLine = 20;
   const pixelWidth = width / pixelsPerLine;
   const pixelHeight = height / pixelsPerLine;
   const colourChange = 30;

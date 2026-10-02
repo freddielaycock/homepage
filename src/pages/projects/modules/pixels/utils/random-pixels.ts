@@ -1,8 +1,12 @@
 import { drawQuadrilateral } from "../../../../../components/canvas/utils/draw-quadrilateral";
 import type { PixelFunctionProps } from "../../../../../pages/projects/modules/pixels/Pixels.types";
 
-export const randomPixels = ({ ctx, width, height }: PixelFunctionProps) => {
-  const pixelsPerLine = 20;
+export const randomPixels = ({
+  ctx,
+  width,
+  height,
+  pixelsPerLine,
+}: PixelFunctionProps) => {
   const pixelWidth = width / pixelsPerLine;
   const pixelHeight = height / pixelsPerLine;
 

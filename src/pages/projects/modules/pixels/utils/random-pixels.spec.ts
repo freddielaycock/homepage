@@ -8,12 +8,11 @@ const mockedDrawQuadrilateral = jest.mocked(drawQuadrilateral);
 
 describe("randomPixels", () => {
   it("calls drawQuadrilateral an expected number of times and calculated pixelWidth and pixelHeight", () => {
-    const canvas = document.createElement("canvas");
     const ctx = {} as CanvasRenderingContext2D;
     const width = 400;
     const height = 400;
 
-    randomPixels({ canvas, ctx, width, height });
+    randomPixels({ ctx, width, height, pixelsPerLine: 20 });
 
     const pixelsPerLine = 20;
     const expectedCalls = pixelsPerLine * pixelsPerLine;

@@ -11,6 +11,7 @@ export type CanvasFunction = (
   canvas: CanvasDimensions & {
     canvas: HTMLCanvasElement;
     ctx: CanvasRenderingContext2D;
+    pixelsPerLine: number;
   } & CanvasFunctionAdditionalArgs,
 ) => void;
 
@@ -21,6 +22,7 @@ export type ExampleCanvasProps = {
 export type SetupCanvasOptions = {
   canvas: HTMLCanvasElement;
   canvasFunction: CanvasFunction;
+  pixelsPerLine: number;
   canvasFunctionAdditionalArgs?: CanvasFunctionAdditionalArgs;
   aspectRatio?: number;
   margin?: number;

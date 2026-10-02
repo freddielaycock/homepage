@@ -3,6 +3,7 @@ import type { SetupCanvasOptions, SetupCanvasProps } from "../Canvas.types";
 export const setupCanvas = ({
   canvas,
   canvasFunction,
+  pixelsPerLine,
   canvasFunctionAdditionalArgs,
   aspectRatio,
   margin = 0,
@@ -28,6 +29,7 @@ export const setupCanvas = ({
       ctx,
       width,
       height,
+      pixelsPerLine,
       ...canvasFunctionAdditionalArgs,
     });
   };

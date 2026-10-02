@@ -1,7 +1,9 @@
 import {
   Box,
   createListCollection,
+  Field,
   Heading,
+  NumberInput,
   Portal,
   Select,
   Text,
@@ -28,6 +30,7 @@ const spiralStartingColours = [
 
 export const Pixels: FC = () => {
   const [canvasFunction, setCanvasFunction] = useState(() => randomPixels);
+  const [pixelsPerLine, setPixelsPerLine] = useState(50);
   const [spiralStartingColour, setSpiralStartingColour] = useState(
     spiralStartingColours[0],
   );
@@ -63,10 +66,11 @@ export const Pixels: FC = () => {
           : undefined,
       aspectRatio: 2,
       margin: 100,
+      pixelsPerLine,
     });
 
     return canvas.dispose;
-  }, [canvasFunction, spiralStartingColour]);
+  }, [canvasFunction, spiralStartingColour, pixelsPerLine]);
 
   return (
     <>
@@ -89,6 +93,7 @@ export const Pixels: FC = () => {
           )
         }
         margin="auto"
+        my={2}
         width="60%"
       >
         <Select.HiddenSelect />
@@ -113,6 +118,18 @@ export const Pixels: FC = () => {
           </Select.Positioner>
         </Portal>
       </Select.Root>
+      <Field.Root width="60%" margin="auto">
+        <Field.Label>Pixels Per Line</Field.Label>
+        <NumberInput.Root
+          value={String(pixelsPerLine)}
+          onValueChange={(e) => setPixelsPerLine(e.valueAsNumber)}
+        >
+          <NumberInput.Label />
+          <NumberInput.ValueText />
+          <NumberInput.Scrubber />
+          <NumberInput.Input />
+        </NumberInput.Root>
+      </Field.Root>
       {canvasFunction === spiralPixels && (
         <Select.Root
           key="spiralStartingColours"

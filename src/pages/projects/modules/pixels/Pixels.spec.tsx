@@ -59,6 +59,16 @@ describe("Pixels", () => {
     ).toBeInTheDocument();
   });
 
+  it("updates the pixelsPerLine when a new value is entered", async () => {
+    render();
+
+    const input = screen.getByRole("spinbutton", { name: "Pixels Per Line" });
+    await userEvent.clear(input);
+    await userEvent.type(input, "100");
+
+    expect(input).toHaveValue("100");
+  });
+
   it("sets the starting colour when the user has selected spiralPixels and updates the starting colour", async () => {
     render();
 
