@@ -29,9 +29,7 @@ describe("Pixels", () => {
     render();
 
     expect(
-      screen.getByRole("heading", {
-        name: 'Pixels! Using the "randomPixels" function',
-      }),
+      screen.getByRole("heading", { name: "Pixels!" }),
     ).toBeInTheDocument();
     expect(
       within(screen.getByRole("combobox")).getByText("randomPixels"),
@@ -42,16 +40,42 @@ describe("Pixels", () => {
   it("updates the canvas function when a new option is selected", async () => {
     render();
 
-    await userEvent.click(screen.getByRole("combobox"));
-    await userEvent.click(screen.getByRole("option", { name: "randomPixels" }));
+    await userEvent.click(
+      screen.getByRole("combobox", {
+        name: "Select a function to generate pixels",
+      }),
+    );
+    await userEvent.click(screen.getByRole("option", { name: "spiralPixels" }));
 
     expect(
-      screen.getByRole("heading", {
-        name: 'Pixels! Using the "randomPixels" function',
-      }),
+      screen.getByRole("heading", { name: "Pixels!" }),
     ).toBeInTheDocument();
     expect(
-      within(screen.getByRole("combobox")).getByText("randomPixels"),
+      within(
+        screen.getByRole("combobox", {
+          name: "Select a function to generate pixels",
+        }),
+      ).getByText("spiralPixels"),
     ).toBeInTheDocument();
+  });
+
+  it("sets the starting colour when the user has selected spiralPixels and updates the starting colour", async () => {
+    render();
+
+    await userEvent.click(
+      screen.getByRole("combobox", {
+        name: "Select a function to generate pixels",
+      }),
+    );
+    await userEvent.click(screen.getByRole("option", { name: "spiralPixels" }));
+
+    const colourCombobox = screen.getByRole("combobox", {
+      name: "Select a starting colour for the spiral pixels",
+    });
+
+    await userEvent.click(colourCombobox);
+    await userEvent.click(screen.getByRole("option", { name: "green" }));
+
+    expect(within(colourCombobox).getByText("green")).toBeInTheDocument();
   });
 });

@@ -3,11 +3,15 @@ export type CanvasDimensions = {
   height: number;
 };
 
+export type CanvasFunctionAdditionalArgs = {
+  startingRgb?: [number, number, number];
+};
+
 export type CanvasFunction = (
   canvas: CanvasDimensions & {
     canvas: HTMLCanvasElement;
     ctx: CanvasRenderingContext2D;
-  },
+  } & CanvasFunctionAdditionalArgs,
 ) => void;
 
 export type ExampleCanvasProps = {
@@ -17,6 +21,7 @@ export type ExampleCanvasProps = {
 export type SetupCanvasOptions = {
   canvas: HTMLCanvasElement;
   canvasFunction: CanvasFunction;
+  canvasFunctionAdditionalArgs?: CanvasFunctionAdditionalArgs;
   aspectRatio?: number;
   margin?: number;
 };

@@ -3,6 +3,7 @@ import type { SetupCanvasOptions, SetupCanvasProps } from "../Canvas.types";
 export const setupCanvas = ({
   canvas,
   canvasFunction,
+  canvasFunctionAdditionalArgs,
   aspectRatio,
   margin = 0,
 }: SetupCanvasOptions): SetupCanvasProps => {
@@ -22,7 +23,13 @@ export const setupCanvas = ({
     canvas.style.height = `${height}px`;
     canvas.style.width = `${width}px`;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    canvasFunction({ canvas, ctx, width, height });
+    canvasFunction({
+      canvas,
+      ctx,
+      width,
+      height,
+      ...canvasFunctionAdditionalArgs,
+    });
   };
 
   resize();
