@@ -19,4 +19,20 @@ describe("drawText", () => {
 
     expect(ctx.fillText).toHaveBeenCalledWith("Hello, world!", 10, 20, 100);
   });
+
+  it("should use the default style if none is provided", () => {
+    drawText({
+      ctx,
+      text: "Hello, world!",
+      startX: 10,
+      startY: 20,
+    });
+
+    expect(ctx.fillText).toHaveBeenCalledWith(
+      "Hello, world!",
+      10,
+      20,
+      undefined,
+    );
+  });
 });

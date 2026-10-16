@@ -1,3 +1,4 @@
+import type { CanvasFunction } from "../Canvas.types";
 import { setupCanvas } from "./setup-canvas";
 
 const setWindowSize = (width: number, height: number): void => {
@@ -11,12 +12,12 @@ describe("SetupCanvas", () => {
   const ctx = {
     setTransform: jest.fn(),
   } as unknown as CanvasRenderingContext2D;
-  const canvasFunction = jest.fn();
+  const canvasFunction = jest.fn() as CanvasFunction;
   let canvas: HTMLCanvasElement;
   let getContext: jest.SpyInstance;
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    jest.resetAllMocks();
 
     setWindowSize(800, 600);
     canvas = document.createElement("canvas");
@@ -33,7 +34,7 @@ describe("SetupCanvas", () => {
       value: 2,
     });
 
-    const setup = setupCanvas({ canvas, canvasFunction });
+    const setup = setupCanvas({ canvas, canvasFunction, pixelsPerLine: 100 });
 
     expect(canvas.width).toBe(1600);
     expect(canvas.height).toBe(1200);
@@ -45,6 +46,7 @@ describe("SetupCanvas", () => {
       ctx,
       width: 800,
       height: 600,
+      pixelsPerLine: 100,
     });
 
     setWindowSize(1000, 700);
@@ -57,13 +59,14 @@ describe("SetupCanvas", () => {
       ctx,
       width: 1000,
       height: 700,
+      pixelsPerLine: 100,
     });
 
     setup.dispose();
   });
 
   it("stops redrawing after disposal", () => {
-    const setup = setupCanvas({ canvas, canvasFunction });
+    const setup = setupCanvas({ canvas, canvasFunction, pixelsPerLine: 100 });
 
     setup.dispose();
     window.dispatchEvent(new Event("resize"));
@@ -75,6 +78,7 @@ describe("SetupCanvas", () => {
     const setup = setupCanvas({
       canvas,
       canvasFunction,
+      pixelsPerLine: 100,
       aspectRatio: 1,
     });
 
@@ -88,6 +92,7 @@ describe("SetupCanvas", () => {
     const setup = setupCanvas({
       canvas,
       canvasFunction,
+      pixelsPerLine: 100,
       margin: 50,
     });
 
@@ -97,11 +102,24 @@ describe("SetupCanvas", () => {
     setup.dispose();
   });
 
+  it("defaults the dpr to 1 when devicePixelRatio is not set", () => {
+    Object.defineProperty(window, "devicePixelRatio", {
+      configurable: true,
+      value: undefined,
+    });
+
+    const setup = setupCanvas({ canvas, canvasFunction, pixelsPerLine: 100 });
+
+    expect(ctx.setTransform).toHaveBeenCalledWith(1, 0, 0, 1, 0, 0);
+
+    setup.dispose();
+  });
+
   it("throws when a 2D drawing context is unavailable", () => {
     getContext.mockReturnValue(null);
 
-    expect(() => setupCanvas({ canvas, canvasFunction })).toThrow(
-      "Failed to get 2D context",
-    );
+    expect(() =>
+      setupCanvas({ canvas, canvasFunction, pixelsPerLine: 100 }),
+    ).toThrow("Failed to get 2D context");
   });
 });

@@ -14,6 +14,7 @@ export const ExampleCanvas = ({ canvasFunction }: ExampleCanvasProps) => {
     const canvas = setupCanvas({
       canvas: element,
       canvasFunction,
+      pixelsPerLine: 100,
     });
 
     return canvas.dispose;

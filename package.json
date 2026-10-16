@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "pnpm exec tsr generate && node esbuild.config.mjs",
+    "check:ts": "tsc --noEmit",
     "dev": "pnpm exec tsr generate && node esbuild.config.mjs --serve",
     "lint": "biome check",
     "lint:fix": "biome check --write",

@@ -28,6 +28,7 @@ export const drawText = ({
   if (textAlign) {
     ctx.textAlign = textAlign;
   }
+
   if (textBaseline) {
     ctx.textBaseline = textBaseline;
   }

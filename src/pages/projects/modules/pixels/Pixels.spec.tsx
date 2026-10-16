@@ -1,4 +1,4 @@
-import { screen, within } from "@testing-library/react";
+import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { chakraUiRender } from "../../../../utils/chakra-ui-render";
@@ -59,14 +59,65 @@ describe("Pixels", () => {
     ).toBeInTheDocument();
   });
 
-  it("updates the pixelsPerLine when a new value is entered", async () => {
+  describe("pixelsPerLine", () => {
+    it("updates the pixelsPerLine when a new value is entered", async () => {
+      render();
+
+      const input = screen.getByRole("spinbutton", {
+        name: "Pixels Per Line (max 1000)",
+      });
+      await userEvent.clear(input);
+      await userEvent.type(input, "100");
+
+      await waitFor(() => expect(input).toHaveValue("100"));
+    });
+
+    it("updates the pixelsPerLine to 1000 when a value greater than 1000 is entered", async () => {
+      render();
+
+      const input = screen.getByRole("spinbutton", {
+        name: "Pixels Per Line (max 1000)",
+      });
+      await userEvent.clear(input);
+      await userEvent.type(input, "2000");
+      await userEvent.tab();
+
+      await waitFor(() => expect(input).toHaveValue("1000"));
+    });
+
+    it("updates the pixelsPerLine to 0 when a non-numeric value is entered", async () => {
+      render();
+
+      const input = screen.getByRole("spinbutton", {
+        name: "Pixels Per Line (max 1000)",
+      });
+      await userEvent.clear(input);
+      await userEvent.type(input, "a");
+      await userEvent.tab();
+
+      await waitFor(() => expect(input).toHaveValue("0"));
+    });
+  });
+
+  it("sets the colour change amount when the user has selected spiralPixels and updates the colour change amount", async () => {
     render();
 
-    const input = screen.getByRole("spinbutton", { name: "Pixels Per Line" });
-    await userEvent.clear(input);
-    await userEvent.type(input, "100");
+    await userEvent.click(
+      screen.getByRole("combobox", {
+        name: "Select a function to generate pixels",
+      }),
+    );
+    await userEvent.click(screen.getByRole("option", { name: "spiralPixels" }));
 
-    expect(input).toHaveValue("100");
+    const colourChangeCombobox = screen.getByRole("combobox", {
+      name: "How much to change the colour for each spiral step",
+    });
+    await userEvent.click(colourChangeCombobox);
+    await userEvent.click(screen.getByRole("option", { name: "medium" }));
+
+    expect(
+      within(colourChangeCombobox).getByText("medium"),
+    ).toBeInTheDocument();
   });
 
   it("sets the starting colour when the user has selected spiralPixels and updates the starting colour", async () => {
@@ -87,5 +138,12 @@ describe("Pixels", () => {
     await userEvent.click(screen.getByRole("option", { name: "green" }));
 
     expect(within(colourCombobox).getByText("green")).toBeInTheDocument();
+  });
+
+  it("does not setup the canvas if the canvas element ref cannot be found", async () => {
+    render();
+
+    const canvas = screen.queryByRole("img", { name: "Pixels Canvas" });
+    expect(canvas).not.toBeInTheDocument();
   });
 });

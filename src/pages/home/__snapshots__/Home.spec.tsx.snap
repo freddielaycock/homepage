@@ -237,7 +237,11 @@ exports[`Home renders 1`] = `
       <span
         data-test-id="bold-text"
       />
-      .
+      . However, I would also be very interested in working on 
+      <span
+        data-test-id="bold-text"
+      />
+      , and am actively working on improving my skills in this area.
     </p>
   </div>
 </div>
