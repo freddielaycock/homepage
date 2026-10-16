@@ -43,10 +43,12 @@ export const spiralPixels: CanvasFunction = ({
   height,
   pixelsPerLine,
   startingRgb = [255, 0, 0],
+  colourChange = "small",
 }: PixelFunctionProps) => {
   const pixelWidth = width / pixelsPerLine;
   const pixelHeight = height / pixelsPerLine;
-  const colourChange = 30;
+  const colourChangeAmount =
+    colourChange === "small" ? 8 : colourChange === "medium" ? 16 : 32;
   const colour = { r: startingRgb[0], g: startingRgb[1], b: startingRgb[2] };
 
   getSpiralCoords(pixelsPerLine).forEach(({ row, col }) => {
@@ -58,7 +60,7 @@ export const spiralPixels: CanvasFunction = ({
       Math.floor(Math.random() * 3)
     ] as keyof typeof colour;
 
-    colour[randomChannel] = (colour[randomChannel] + colourChange) % 256;
+    colour[randomChannel] = (colour[randomChannel] + colourChangeAmount) % 256;
 
     drawQuadrilateral({
       ctx,

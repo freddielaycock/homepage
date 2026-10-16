@@ -72,7 +72,9 @@ export const Home: FC = () => (
         <Bold text="cutting-edge technologies" />, with particular focuses on{" "}
         <Bold text="performance optimisation" />,{" "}
         <Bold text="user experience" /> and{" "}
-        <Bold text="modernising old platforms" />.
+        <Bold text="modernising old platforms" />. However, I would also be very
+        interested in working on <Bold text="UI for Game Design" />, and am
+        actively working on improving my skills in this area.
       </Text>
     </Box>
   </Page>

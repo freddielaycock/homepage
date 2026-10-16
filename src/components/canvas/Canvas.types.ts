@@ -3,8 +3,12 @@ export type CanvasDimensions = {
   height: number;
 };
 
+export type StartingRgb = [number, number, number];
+export type ColourChange = "small" | "medium" | "large";
+
 export type CanvasFunctionAdditionalArgs = {
-  startingRgb?: [number, number, number];
+  startingRgb?: StartingRgb;
+  colourChange?: ColourChange;
 };
 
 export type CanvasFunction = (
